@@ -14,11 +14,30 @@
 
 ## Général
 1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
-2.	Qu’est-ce qu’un algorithme ?  
+
+L'environnement à installer pour exécuter un script PHP est Apache qui permet d'interpréter ce langage. On peut installer Laragon, WAMP, XAMP pour ce contexte.
+Il ne faut pas faire cohabiter deux versions de logiciels, cela créerait des conflits.
+    
+2.	Qu’est-ce qu’un algorithme ?
+
+Un algorithme est une suite d'instructions données afin de résoudre un problème que l'on a posé initialement.
+  
 3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
+
+Une variable est un espace de stockage que l'on crée afin de pouvoir y stocker une valeur numérique, une chaîne de caractères, un tableau, etc... 
+Elle est symbolisée par le signe "$" que l'on écrit avant de nommer la variable.
+
 4.	Qu’est-ce que la portée d’une variable ?
+
+La portée d'une variable est la zone d'effet de la variable dès qu'elle est déclarée. C'est-à-dire en d'autres termes, l'impact dans la portion de code où elle est utilisée.
+Elle peut être locale ou globale (cette dernière s'applique à tous les blocs de code, dont les classes).
+  
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
-6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation 
+
+Une constante est un espace de mémoire dont la valeur est définie et qui ne sera pas modifiée par la suite. 
+A l'inverse la variable est un élément de données dont la valeur évolue au cours de l'exécution d'un programme.
+
+6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
@@ -33,8 +52,21 @@
 
 ## Front-end
 18.	Définir HTML
+
+HTML est l'acronyme pour «HyperText Markup language», que nous pouvons traduire en français par «langage de balises pour l'hypertexte».
+Ce langage est utilisé pour concevoir et représenter le contenu d'une page web ainsi que son squelette (structure).
+
 19.	Définir CSS
+
+CSS est l'acronyme pour «Cascading Style Sheets» ou en français «feuilles de style en cascade». Ce langage est utilisé pour décrire la présenationt d'un document écrit en HTML ou XML.
+Ce langage de programmation décrit la façon dont les éléments doivent être affichés à l'écran, sur papier, à l'oral ou sur d'autres médias.
+Autrement dit, le CSS est le langage qui habille le site web codé en HTML.
+
 20.	Définir Javascript
+
+Le JavaScript, à ne pas confondre avec le Java qui est un autre langage, est un langage de script léger, orienté objet, principalement connu comme le langage de script des pages web.
+Si on devait définir l'importance du JavaScript (abrégé en «JS»), on pourrait dire que l'HTML est la carrosserie d'une voiture, le CSS la couleur de celle-ci et le JS le moteur qui fait avancer la voiture.
+
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
 22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
 23.	Qu’est-ce qu’un sélecteur CSS ?
@@ -149,10 +181,17 @@ h.	Concaténer 2 chaînes de caractères
 102.	Qu’est-ce que l’hameçonnage ?
 103.	Définir la « validation des entrées »
 
+
 ## RGPD
 104.	Qu’est-ce que le RGPD ?
+      
+Le RGPD est l'acronyme de «Règlement Général de Protection des Données» en français. En anglais, cet acronyme sera écrit GDPR "General Data Protection Regulation".
+
 105.	Quel est son objectif principal ?
 106.	Quelle est la date d’entrée en vigueur du RGPD ?
+
+Le RGPD est entré en vigueur le 24 mai 2016 et s'applique depuis le 25 mai 2018.
+
 107.	Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
 108.	En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
 109.	Quel est le consentement valide selon le RPGD ?

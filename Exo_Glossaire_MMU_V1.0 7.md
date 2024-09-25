@@ -40,8 +40,16 @@ A l'inverse la variable est un élément de données dont la valeur évolue au c
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+
+Il existe les tableaux associatifs et les tableaux à index numériques. 
+Dans le premier cas, il s'agit d'un tableau dont les indices sont des chaînes de caractères.
+Dans le deuxième cas, il s'agit d'un tableau dont les indices sont des valeurs numériques.
+
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
+
+La fonction PHP strlen() permet de demander la longueur de d'une chaîne de caractères
+
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
@@ -70,6 +78,10 @@ Si on devait définir l'importance du JavaScript (abrégé en «JS»), on pourra
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
 22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
 23.	Qu’est-ce qu’un sélecteur CSS ?
+
+Un sélecteur CSS est un élément qui cible une balise HTML pour en modifier les propriétés. On peut cibler une balise <body> qui altèrera le corps du site.
+Si l'on attribue à cette balise un ID ou une CLASS, alors on peut modifier certains aspects de façon individuelles ou multiples.
+
 24.	Quelle balise HTML permet de créer un lien hypertexte ?
 25.	Qu’est-ce qu’une requête AJAX ?
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?

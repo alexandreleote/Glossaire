@@ -34,15 +34,15 @@ Elle peut être locale ou globale (cette dernière s'applique à tous les blocs 
   
 5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
 
-Une constante est un espace de mémoire dont la valeur est définie et qui ne sera pas modifiée par la suite. 
+Une constante est un espace de mémoire dont la valeur est définie et qui ne sera pas modifiée par la suite. <br>
 A l'inverse la variable est un élément de données dont la valeur évolue au cours de l'exécution d'un programme.
 
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
 
-Il existe les tableaux associatifs et les tableaux à index numériques. 
-Dans le premier cas, il s'agit d'un tableau dont les indices sont des chaînes de caractères.
+Il existe les tableaux associatifs et les tableaux à index numériques. <br>
+Dans le premier cas, il s'agit d'un tableau dont les indices sont des chaînes de caractères.<br>
 Dans le deuxième cas, il s'agit d'un tableau dont les indices sont des valeurs numériques.
 
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
@@ -66,7 +66,7 @@ Ce langage est utilisé pour concevoir et représenter le contenu d'une page web
 
 19.	Définir CSS
 
-CSS est l'acronyme pour «Cascading Style Sheets» ou en français «feuilles de style en cascade». Ce langage est utilisé pour décrire la présenationt d'un document écrit en HTML ou XML.
+CSS est l'acronyme pour «Cascading Style Sheets» ou en français «feuilles de style en cascade». Ce langage est utilisé pour décrire la présenationt d'un document écrit en HTML ou XML. <br>
 Ce langage de programmation décrit la façon dont les éléments doivent être affichés à l'écran, sur papier, à l'oral ou sur d'autres médias.
 Autrement dit, le CSS est le langage qui habille le site web codé en HTML.
 
@@ -83,9 +83,21 @@ Un sélecteur CSS est un élément qui cible une balise HTML pour en modifier le
 Si l'on attribue à cette balise un ID ou une CLASS, alors on peut modifier certains aspects de façon individuelles ou multiples.
 
 24.	Quelle balise HTML permet de créer un lien hypertexte ?
+
+La balise <a> avec l'attribut href permet de créer un lien hypertexte. Par exemple un lien pour revenir à la page index : *a href="index.html"* entre <> pour qu'elle soit effective.
+
 25.	Qu’est-ce qu’une requête AJAX ?
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
+
+Le sélecteur CSS qui permet de sélectionner tous les éléments est *. <br>
+Pour une classe cela donne : .class{ } <br>
+Pour un identifiant spécifique : #id{ } 
+
 27.	Définir le responsive design
+
+Il s'agit de rendre un site web adapté et accessible à tous les supports (devices) possibles : ordinateurs, smartphones, tablettes, etc.
+Cela s'effectue à la fois avec la programmation HTML et le style CSS 
+
 28.	Qu’est-ce que le templating ?
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?

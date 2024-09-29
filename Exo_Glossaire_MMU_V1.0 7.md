@@ -108,7 +108,14 @@ Cela s'effectue à la fois avec la programmation HTML et le style CSS
 
 ## UX UI
 35.	Quelle est la différence entre UX Design et UI Design ?
+
+L'UX Design désigne l'expérience utilisateur (User eXperience), il s'agit de ce qui est permis de faire à l'utilisateur sur un site, une application mobile ou un logiciel. <br>
+L'UI Design désigne quant à lui l'interface utilisateur (User Interface), cela implique les fenêtres, boutons, liens et tous les éléments visuels et textuels.
+
 36.	Qu’est-ce qu’un wireframe ? 
+
+Le wireframe est une maquette fonctionnelle, un schéma permettant de définir les éléments et composants essentiels que la maquette doit contenir. IL s'agit d'un squelette pour la conception de l'application, le site ou logiciel. 
+
 37.	Qu’est-ce qu’un prototype ? 
 38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?
 39.	Qu’est-ce que l’accessibilité en UX Design ? 

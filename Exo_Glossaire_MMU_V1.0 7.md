@@ -118,7 +118,13 @@ Le wireframe est une maquette fonctionnelle, un schéma permettant de définir l
 
 37.	Qu’est-ce qu’un prototype ? 
 38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?
+
+La hiérarchie visuelle permet de valoriser les éléments graphiques importants tels que la taille, la couleur et la forme qui sont utilisés pour regrouper de manière logique les informations et guider l'oeil de l'utilisateur sur le site / l'application.
+
 39.	Qu’est-ce que l’accessibilité en UX Design ? 
+
+Il s'agit de permettre à tout un chacun, quelque ce soit son handicap ou non handicap, de profiter pleinement de l'application ou site web. Il est important de permettre aux personnes en situation de handicap d'accéder aux informations au travers du numérique dans une démarche adaptée et facilité leur expérience utilisateur.
+
 40.	Qu’est-ce qu’une grille de mise en page ?
 41.	Qu’est-ce que la notion d’affordance en UX Design ?
 42.	Qu’est-ce qu’un « mobile first design » ?

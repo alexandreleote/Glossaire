@@ -131,8 +131,18 @@ Il s'agit de permettre à tout un chacun, quelque ce soit son handicap ou non ha
 
 ## Programmation orientée objet (POO)
 43.	Donner une définition de la programmation orientée objet 
+
+La programmation orientée objet est la manière de concevoir son code en bloc contenant des variables, fonctions et contantes permettant la création d'objets. Ceci dans le but de construire et organiser son code autrement que de manière procédurale.
+
 44.	Qu’est-ce qu’une classe ? Comment la déclare-t-on ?
+
+Une classe permet d'instancier un objet. Autrement il s'agit du paramétrage de ce dernier avant de le concevoir. La classe est constituée d'attributs qui définissent l'objet qui sera instancié.<br>
+On déclare la classe comme suit : <code>Class NomDeLaClasse {}</code>
+
 45.	Qu’est-ce qu’un objet ?
+
+Un objet est un élément possédant des caractéristiques qui lui sont propres et définies en amont. Il s'agit de caractéristiques physiques le rendant tangible. (On ne parle pas de son usage)
+
 46.	Définir la notion de propriété / attribut / méthode
 47.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
 48.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?

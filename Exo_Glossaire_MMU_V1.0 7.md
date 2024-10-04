@@ -38,6 +38,21 @@ Une constante est un espace de mémoire dont la valeur est définie et qui ne se
 A l'inverse la variable est un élément de données dont la valeur évolue au cours de l'exécution d'un programme.
 
 6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
+
+Il s'agit d'une variable prédéfinie permettant d'accéder à des données stockées à l'extérieur du programme dans lequelle la superglobale est appelée. Elle permet de récupérer des données provenant de formulaires, de cookies, de sesssions ou encore d'environnement d'exécution.<br>
+Il existe neuf superglobales en PHP :<br>
+<ul>
+    <li><code>$_GLOBALS</code> : contient toutes les varaiables globales.</li>
+    <li><code>$_SERVER</code> : contient des informations sur le serveur et l'environnement d'exécution.</li>
+    <li><code>$_GET</code> : contient les données envoyées par la méthode HTTP GET.</li>
+    <li><code>$_POST</code> : contient les données envoyées par la méthode HTTP POST.</li>
+    <li><code>$_FILES</code> : contient les informations relatives aux fichiers téléchargés via un formulaire.</li>
+    <li><code>$_COOKIE</code> : contient les valeurs des cookies envoyés par le client.</li>
+    <li><code>$_SESSION</code> : contient les données de session de l'utilisateur.</li>
+    <li><code>$_REQUEST</code> : contient les données provenant à la fois de <code>$_GET</code>, <code>$_POST</code>, et <code>$_COOKIE</code>.</li>
+    <li><code>$_ENV</code> : contient les variables d'environnement.</li>    
+</ul>
+
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
 
@@ -46,6 +61,44 @@ Dans le premier cas, il s'agit d'un tableau dont les indices sont des chaînes d
 Dans le deuxième cas, il s'agit d'un tableau dont les indices sont des valeurs numériques.
 
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
+
+Il existe trois grandes structures de contrôles en algorithmie : les structures séquentielles, les structures conditionnelles et les structures itératives.<br><br>
+Par exemple pour les *structures séquentielles*, il  s'agit d'exécuter les instructions dans l'ordre où elles apparaissent :<br>
+a = 5<br>
+b = 10<br>
+c = a + b<br>
+print(c)<br>
+<br>
+Pour les *structures conditionnelles*, on désire vérifier une information et retourner un résultat de manière à ce que l'information vérifiée corresponde au résultat attendu ou non:<br><br>
+a = 5;<br>
+if (a > 0) {<br>
+    echo "a est positif";<br>
+} else if (a < 0) {<br>
+    echo "a est négatif"<br>
+} else {<br>
+    echo "a est nul" }<br>
+<br>
+Enfin pour les *structures itératives*, on souhaite répéter une séquence d'instructions un nombre de fois non défini jusqu'à remplir la condition.<br>
+Il exsite trois types de boucles : la boucle <code>for</code>, la boucle <code>while</code> et la boucle <code>foreach</code>.<br>
+<br>
+Méthode <code>for</code> :<br>
+for($i = 1; $i <= 10; $i++) {<br>
+    echo $i." ";}<br>
+<br>
+Méthode <code>while</code> :<br>
+$i = 1;<br>
+while($i <= 10) {<br>
+    echo $i." ";<br>
+    $i++;}<br>
+<br>
+Méthode <code>foreach</code> :<br>
+$range = range(1,10);<br>
+var_dump($range);<br>
+<br>
+foreach(range(1,10) as $v) {<br>
+    echo $v." ";}<br>
+
+
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
 
 La fonction PHP strlen() permet de demander la longueur de d'une chaîne de caractères

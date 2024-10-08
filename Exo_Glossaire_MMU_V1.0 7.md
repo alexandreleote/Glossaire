@@ -54,6 +54,47 @@ Il existe neuf superglobales en PHP :<br>
 </ul>
 
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+
+Il existe 8 types (primitifs) que l'on peut associer à une variable :
+- int : entier
+  
+  | $age = 42;  // Type : entier<br>
+  
+- float : nombre décimal
+  
+  | $price = 19.99;  // Type : flottant<br>
+  
+- string : chaîne de caractères
+  
+  | $name = "Alexandre";  // Type : chaîne de caractères<br>
+  
+- bool : booléen (vrai/faux)
+  
+  | $isCoding = true;  // Type : booléen<br>
+  
+- array : tableau
+  
+  | $manga = array("DemonSlayer", "Shangri-La Frontier", "Solo Leveling");  // Type : tableau indexé<br>
+    $personne = [
+      "nom" => "Alexandre",
+      "age" => 29
+      ];  // Type : tableau associatif<br>
+  
+- object : objet
+  
+  | class Personne { public $nom; public $age; }<br>
+    $personne = new Personne();  // Type : objet<br>
+    $personne->nom = "Alice";<br>
+    $personne->age = 25;<br>
+  
+- NULL : absence de valeur
+  
+  | $despair = null;  // Type : NULL<br>
+  
+- resource : ressource (externe)
+  
+  | $folder = fopen("exemple.txt", "r");  // Type : resource<br>
+
 8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
 
 Il existe les tableaux associatifs et les tableaux à index numériques. <br>

@@ -42,10 +42,18 @@ A l'inverse la variable est un élément de données dont la valeur évolue au c
 Il s'agit d'une variable prédéfinie permettant d'accéder à des données stockées à l'extérieur du programme dans lequelle la superglobale est appelée. Elle permet de récupérer des données provenant de formulaires, de cookies, de sesssions ou encore d'environnement d'exécution.<br>
 Il existe neuf superglobales en PHP :<br>
 <ul>
-    <li><code>$_GLOBALS</code> : contient toutes les varaiables globales.</li>
-    <li><code>$_SERVER</code> : contient des informations sur le serveur et l'environnement d'exécution.</li>
-    <li><code>$_GET</code> : contient les données envoyées par la méthode HTTP GET.</li>
-    <li><code>$_POST</code> : contient les données envoyées par la méthode HTTP POST.</li>
+    <li><code>$GLOBALS</code> : permet de parcourir rapidement l’ensemble des variables globales définies dans un script.</li>
+    function test() {<br>
+    $foo = "local variable";<br>
+    echo '$foo in global scope: ' . $GLOBALS["foo"] . "\n";<br>
+    echo '$foo in current scope: ' . $foo . "\n"; }
+    $foo = "Example content";<br>
+    test();<br><br>
+    <li><code>$_SERVER</code> : contient des variables définies par le serveur utilisé ainsi que des informations relatives au script..</li>
+    echo $_SERVER['SERVER_NAME'];<br><br>
+    <li><code>$_GET</code> : contient les données indiquées dans l'url.</li>
+    echo 'Hello ' . htmlspecialchars($_GET["name"]) . '!';<br><br>
+    <li><code>$_POST</code> : contient les données indiquées dans l'url.</li>
     <li><code>$_FILES</code> : contient les informations relatives aux fichiers téléchargés via un formulaire.</li>
     <li><code>$_COOKIE</code> : contient les valeurs des cookies envoyés par le client.</li>
     <li><code>$_SESSION</code> : contient les données de session de l'utilisateur.</li>
@@ -211,6 +219,9 @@ L'UI Design désigne quant à lui l'interface utilisateur (User Interface), cela
 Le wireframe est une maquette fonctionnelle, un schéma permettant de définir les éléments et composants essentiels que la maquette doit contenir. IL s'agit d'un squelette pour la conception de l'application, le site ou logiciel. 
 
 37.	Qu’est-ce qu’un prototype ? 
+
+On entend par prototype, une première version d'un site ou une application simulant son interface et ses fonctionnalités. On peut alors tester si les fonctions pensées et crées sont validées ou à revoir. Un prototype peut être plus ou moins fonctionnel à savoir s'il s'agit d'une maquette papier, interactive ou d'une application déjà construite.
+
 38.	Qu’est-ce que la hiérarchie visuelle en UI Design ?
 
 La hiérarchie visuelle permet de valoriser les éléments graphiques importants tels que la taille, la couleur et la forme qui sont utilisés pour regrouper de manière logique les informations et guider l'oeil de l'utilisateur sur le site / l'application.

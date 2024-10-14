@@ -49,16 +49,25 @@ Il existe neuf superglobales en PHP :<br>
     echo '$foo in current scope: ' . $foo . "\n"; }
     $foo = "Example content";<br>
     test();<br><br>
-    <li><code>$_SERVER</code> : contient des variables définies par le serveur utilisé ainsi que des informations relatives au script..</li>
+    <li><code>$_SERVER</code> : contient des variables définies par le serveur utilisé ainsi que des informations relatives au script.</li>
     echo $_SERVER['SERVER_NAME'];<br><br>
-    <li><code>$_GET</code> : contient les données indiquées dans l'url.</li>
+    <li><code>$_GET</code> : stocke les valeurs lorsque le formulaire sera envoyé via la méthode GET.</li>
     echo 'Hello ' . htmlspecialchars($_GET["name"]) . '!';<br><br>
-    <li><code>$_POST</code> : contient les données indiquées dans l'url.</li>
+    <li><code>$_POST</code> : stocke les valeurs lorsque le formulaire sera envoyé via la méthode POST.</li>
+    echo 'Bonjour, tu t\'appelles ' .$_POST['prenom'];<br><br>
     <li><code>$_FILES</code> : contient les informations relatives aux fichiers téléchargés via un formulaire.</li>
-    <li><code>$_COOKIE</code> : contient les valeurs des cookies envoyés par le client.</li>
-    <li><code>$_SESSION</code> : contient les données de session de l'utilisateur.</li>
-    <li><code>$_REQUEST</code> : contient les données provenant à la fois de <code>$_GET</code>, <code>$_POST</code>, et <code>$_COOKIE</code>.</li>
-    <li><code>$_ENV</code> : contient les variables d'environnement.</li>    
+    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "uploads/" . basename($_FILES["fileToUpload"]["name"]));<br><br>
+    <li><code>$_COOKIE</code> : est un tableau associatif contenant les variables passées via des cookies HTTP.</li>
+    setcookie("utilisateur", "Jean", time() + (86400 * 30), "/");<br>
+    echo isset($_COOKIE["utilisateur"]) ? $_COOKIE["utilisateur"] : "Le cookie n'est pas défini.";<br><br>
+    <li><code>$_SESSION</code> : est un tableau associatif contenant les variables de session.</li>
+    session_start(); $_SESSION["utilisateur"] = "Jean";<br>
+    session_start(); echo isset($_SESSION["utilisateur"]) ? $_SESSION["utilisateur"] : "Aucun utilisateur.";<br><br>
+    <li><code>$_REQUEST</code> : est un tableau associatif contenant les variables de <code>$_GET</code>, <code>$_POST</code>, et <code>$_COOKIE</code>.</li>
+    echo isset($_REQUEST["nom"]) ? $_REQUEST["nom"] : "Paramètre non défini.";<br>
+    <li><code>$_ENV</code> : contient des informations liées à l'envrionnement dans lequel s'exécute le script.</li>
+    $_ENV["APP_ENV"] = "production";<br>
+    echo isset($_ENV["APP_ENV"]) ? $_ENV["APP_ENV"] : "Variable non définie.";<br><br>
 </ul>
 
 7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)

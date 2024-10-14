@@ -64,7 +64,7 @@ Il existe neuf superglobales en PHP :<br>
     session_start(); $_SESSION["utilisateur"] = "Jean";<br>
     session_start(); echo isset($_SESSION["utilisateur"]) ? $_SESSION["utilisateur"] : "Aucun utilisateur.";<br><br>
     <li><code>$_REQUEST</code> : est un tableau associatif contenant les variables de <code>$_GET</code>, <code>$_POST</code>, et <code>$_COOKIE</code>.</li>
-    echo isset($_REQUEST["nom"]) ? $_REQUEST["nom"] : "Paramètre non défini.";<br>
+    echo isset($_REQUEST["nom"]) ? $_REQUEST["nom"] : "Paramètre non défini.";<br><br>
     <li><code>$_ENV</code> : contient des informations liées à l'envrionnement dans lequel s'exécute le script.</li>
     $_ENV["APP_ENV"] = "production";<br>
     echo isset($_ENV["APP_ENV"]) ? $_ENV["APP_ENV"] : "Variable non définie.";<br><br>

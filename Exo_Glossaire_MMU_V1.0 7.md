@@ -159,13 +159,21 @@ foreach(range(1,10) as $v) {<br>
 
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
 
-La fonction PHP strlen() permet de demander la longueur de d'une chaîne de caractères
+La fonction PHP strlen() permet de demander la longueur de d'une chaîne de caractères.
 
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
+
+Les deux instructions vont permettre de charger des fichiers PHP. La différence réside dans le comportement de chacune des instructions si le fichier demandé n'existe pas.<br>
+En effet, « include » va relever l'erreur sans compromettre la suite du code et ainsi laisser le programmer s'exécuter. A l'inverse, « require » va relever l'erreur et stoppera le script.<br>
+
 14.	Comment effectuer une redirection en PHP ?
 15.	Définir la partie « front-end » et « back-end » d’une application
+
+La partie « front-end » correspond à l'ensemble des productions qu'un utilisateur pourra voir et aura la possibilité d'intéragir avec. Il s'agirait par exemple de l'espace d'un magasin dans lequel le client peut sa balader (zones prévues à cet effet).<br>
+Pour la partie « back-end », il s'agit des données dont l'utilisateur n'est pas censé avoir accès. Il s'agit de l'ensemble du code permettant le fonctionnement du site et de récupérer les données stockées en base de données. Par exemple, il s'agit de ce qu'il se passe derrière le comptoir d'une boutique ou ce que l'on appelle l'arrière-boutique.<br>
+
 16.	Définir le contrôle de version ? Qu’est-ce que Git ?
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
 

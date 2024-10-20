@@ -175,7 +175,16 @@ La partie « front-end » correspond à l'ensemble des productions qu'un utilisa
 Pour la partie « back-end », il s'agit des données dont l'utilisateur n'est pas censé avoir accès. Il s'agit de l'ensemble du code permettant le fonctionnement du site et de récupérer les données stockées en base de données. Par exemple, il s'agit de ce qu'il se passe derrière le comptoir d'une boutique ou ce que l'on appelle l'arrière-boutique.<br>
 
 16.	Définir le contrôle de version ? Qu’est-ce que Git ?
+
+Le contrôle de version est la pratique qui consiste à suivre et gérer les changements apportés au code d'un logiciel. Ainsi, cela permet aux différents intervenants de l'équipe de développement de gérer les changements au fil du temps.
+De plus, le contrôle de version permet un suivi intelligent et clair dans les modifications apportées au code.
+
+Git est un système permettant le contrôle de version permettant de gérer les versions localement (chaque utilisateur a une copie de l'historique du projet). Il permet également de créer des branches afin de ne pas altérer le code source mais de vérifier une fonctionnalité avant da la fusionner (merge) à la branche principale (main/master).
+De plus, il propose un suivi des moficiations de façon à ce que les développeurs voient les différences apportées entre les commits (qui, quoi, quand). On peut collaborer via des dépôts à distance (remote repositroies)
+
 17.	Qu’est-ce qu’un CMS ? Citer au moins 2 exemples
+
+Un CMS est un acronyme désignant un système de gestion de contenu : Content Management System. Ce logiciel en ligne permet à ses utilisateurs de créer, gérer et modifier facilment un site web sans nécessairement avoir besoin de connaissances techniques dans les langages utilisés (HTML, CSS, JS, PHP). WordPress est un CMS reconnu, OpenSource, disposant d'un grand choix de template pour créer son site. Au départ créé pour repondre à l'engouement des blogs, aujourd'hui il s'agit d'un pilier de la création de site web pour les personnes souhaitant avoir une vitrine sans pour autant suivre une formation de développeur web. D'autres CMS connus sont : Drupal, PrestaShop pour les e-commerces, Magento, etc...
 
 ## Front-end
 18.	Définir HTML
@@ -222,7 +231,17 @@ Cela s'effectue à la fois avec la programmation HTML et le style CSS
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 31.	Qu’est-ce qu’un « media query » ?
 32.	Qu’est-ce qu’un pseudo élément en CSS ?
+
+Un pseudo élément en CSS est une fonction permettant de styliser des parties définies d'un élément HTML. Par exemple, pour modifier le surlignage de son texte sur son site web pour ne pas garder celui de base (de couleur bleue), il faut alors écrire dans son CSS ceci : <br>
+<code>::selection {
+    background-color: black;<br>
+    color: white; }</code><br>
+Ainsi on remplace la couleur bleue initiale de la fonction de surlignage en une couleur noire et en changement également la couleur du texte pour s'assurer de la lisibilité. Il faut ajouter -moz- pour définir cela sur les navigateurs mozilla également sinon on perd notre effet et altère l'expérience utilisateur.
+
 33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
+
+Bootstrap est un framework frontend OpenSource permettant de faciliter les modifications de style CSS de sites web responsives en utilisant des classes prédéfinies à intégrer à son code HTML. D'autres framework tels que Tailwind CSS ou Semantic UI, et d'autres encore, sont capables d'en faire autant avec chacun leurs avantages. Tailwind CSS va se concentrer sur des classes précises plutôt que des composants prédéfinis afin de créer des interfaces détaillées sur mesure.
+
 34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
 
 ## UX UI

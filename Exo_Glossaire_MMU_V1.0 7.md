@@ -162,7 +162,19 @@ foreach(range(1,10) as $v) {<br>
 La fonction PHP strlen() permet de demander la longueur de d'une chaîne de caractères.
 
 11.	Qu’est-ce qu’une session ? Quelle fonction permet de démarrer une session en PHP ? Donner un exemple d’utilisation en PHP
+
+Une session correspond à la façon de stocker des données de chaque utilisateur par l'intermédiaire d'un identifiant de session unique. De sorte à ce que les données soient envoyées à l'utilisateur correspondant et non une personne tierce.<br>
+L'utilisateur n'a accès à ses informations que si sa « session » est démarrée.<br>
+<br>
+Pour démarrer une session en PHP, la fonction <code>session_start()</code> est appelée. La sessions est alors en cours tout le temps où l'utilisateur reste sur la ou les pages en relation. Habituellement, elle se ferme dès lors que l'utilisateur ferme son navigateur (sauf si l'utilisateur se déconnecte via la fonction prévue à cet effet ou s'il prolonge la session via un cookie).
+
 12.	Qu’est-ce qu’un cookie ? Donner un exemple d’utilisation en PHP
+
+Un cookie est un fichier stocké côté client au sein de son navigateur. Ces cookies servent à garder en mémoire les préférences d'utilisation de l'utilisateur entre les visites d'une page ou d'un site web.<br>
+Ces fichiers contiennent des données pouvant être des informations de session, des identifiants, des paramètres de navigation, etc. Leur durée de vie est généralement définie de sorte qu'ils soient utiles et par la suite supprimés automatiquement si nécessaire.<br>
+<br>
+Lorsque l'on navigue sur un site web, ce dernier peut enregistrer nos idenfiants de connexion afin de ne pas perdre de temps à rentrer à nouveau les informations. Cela facilite l'expérience utilisateur et permet également de garder en mémoire le nom de celui-ci, si l'on associe son idenfiant au nom renseigné.
+
 13.	Quelle est la différence entre les instructions « require » et « include » en PHP
 
 Les deux instructions vont permettre de charger des fichiers PHP. La différence réside dans le comportement de chacune des instructions si le fichier demandé n'existe pas.<br>

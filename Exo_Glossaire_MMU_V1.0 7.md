@@ -242,6 +242,11 @@ Cela s'effectue à la fois avec la programmation HTML et le style CSS
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 31.	Qu’est-ce qu’un « media query » ?
+
+Un « media query » est une fonction en CSS permettant de définir le comportement de certains éléments, classes ou ids en fonction de paramètres définis par le concepteur. <br>
+Par exemple, on peut définir la taille minimale d'un écran et la taille maximale dans lesquelles le comportement de ces éléments agissent d'une manière définie, on peut penser au responsive design sur mobile et tablettes qui diffère du format desktop.<br>
+Ainsi, on peut favoriser les performances d'affichage de ces éléments et l'adapter au format pour rendre l'expérience utilisateur optimale.
+
 32.	Qu’est-ce qu’un pseudo élément en CSS ?
 
 Un pseudo élément en CSS est une fonction permettant de styliser des parties définies d'un élément HTML. Par exemple, pour modifier le surlignage de son texte sur son site web pour ne pas garder celui de base (de couleur bleue), il faut alors écrire dans son CSS ceci : <br>
@@ -280,6 +285,11 @@ Il s'agit de permettre à tout un chacun, quelque ce soit son handicap ou non ha
 
 40.	Qu’est-ce qu’une grille de mise en page ?
 41.	Qu’est-ce que la notion d’affordance en UX Design ?
+
+L'affordance en UX Design est le principe dans lequel l'utilisateur évolue de manière intuitive sur une page web. Cette manière est dictée subtilement par les éléments auxquels l'utilisateur fait face : les boutons, les images, les liens...<br>
+Dans le développement d'une site web, nous allons respecter certaines règles de bienséance du développement afin de ne pas perturber l'utilisateur dans sa découverte et lui permettre de naviguer sur le site la première fois comme s'il l'avait déjà fait auparavant.<br>
+Le tout est de fluidifier son expérience de sorte à ce qu'il revienne ou reste sur le site un maximum de temps et de fois.
+
 42.	Qu’est-ce qu’un « mobile first design » ?
 
 ## Programmation orientée objet (POO)

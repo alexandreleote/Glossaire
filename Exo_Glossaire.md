@@ -310,6 +310,9 @@ Un objet est un élément possédant des caractéristiques qui lui sont propres 
 47.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
 48.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
 49.	Qu’est-ce que l’encapsulation ?
+
+L'encapsulation consiste à regrouper des données au sein d'une même unité. Ceci de manière à protéger les données contre l'extérieur. On définit les niveaux d'accès aux données suivant des mots-clés <code>public</code>, <code>private</code> et <code>protected</code>.<br> 
+
 50.	Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
 51.	Définir l’opérateur de résolution de portée
 52.	Définir une méthode / propriété statique

@@ -216,6 +216,11 @@ Le JavaScript, à ne pas confondre avec le Java qui est un autre langage, est un
 Si on devait définir l'importance du JavaScript (abrégé en «JS»), on pourrait dire que l'HTML est la carrosserie d'une voiture, le CSS la couleur de celle-ci et le JS le moteur qui fait avancer la voiture.
 
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
+
+JSON est l'acronyme pour JavaScript Object Notation, qui est un format de fichier permettant d'échanger des données entre plusieurs pages.<br>
+On s'en sert stocker des données de manière hiérarchique. On peut alors créer des collection de paires "nom" : "valeur" pouvant alors donner lieu à des objet, enregistrement, dictionnaire, liste à clé ou tableau associatif.<br>
+On peut utiliser le JSON dans plusieurs cas, dans les APIs REST ou web plus globalement, dans les fichiers de configuration ou encore dans les 'bundles' que l'on trouve dans Symfony par exemple.
+
 22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
 23.	Qu’est-ce qu’un sélecteur CSS ?
 
@@ -284,6 +289,11 @@ La hiérarchie visuelle permet de valoriser les éléments graphiques importants
 Il s'agit de permettre à tout un chacun, quelque ce soit son handicap ou non handicap, de profiter pleinement de l'application ou site web. Il est important de permettre aux personnes en situation de handicap d'accéder aux informations au travers du numérique dans une démarche adaptée et facilité leur expérience utilisateur.
 
 40.	Qu’est-ce qu’une grille de mise en page ?
+
+Il s'agit d'un calque qui permet d'agencer les éléments pour qu'ils soient affichés de manière harmonieuse à l'écran.
+De sorte qu'il puisse voir lors du maquettage le comportement des différents éléments (image, bloc texte, bouton) et anticiper des modifications suivant la taille de certains écrans ou pour permettre un affichage spécifique qui sied à l'information affichée.<br>
+Ainsi on rexpecte la cohérence visuelle, la lisibilité dans la navigation, l'efficacité et la rapidité ainsi que l'adaptabilité. Il s'agit d'un outil important lors de la conception des interfaces afin qu'elles soient esthétiques, organisées et intuitives.
+
 41.	Qu’est-ce que la notion d’affordance en UX Design ?
 
 L'affordance en UX Design est le principe dans lequel l'utilisateur évolue de manière intuitive sur une page web. Cette manière est dictée subtilement par les éléments auxquels l'utilisateur fait face : les boutons, les images, les liens...<br>

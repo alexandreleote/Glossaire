@@ -181,6 +181,13 @@ Les deux instructions vont permettre de charger des fichiers PHP. La différence
 En effet, « include » va relever l'erreur sans compromettre la suite du code et ainsi laisser le programmer s'exécuter. A l'inverse, « require » va relever l'erreur et stoppera le script.<br>
 
 14.	Comment effectuer une redirection en PHP ?
+
+Pour effectuer une redirection en PHP, on utilise la fonction <code>header()</code> en indiquant la page où sera redirigé l'utilisateur.
+Exemple : 
+
+<code>header('Location: http://www.votresite.com/pageprotegee.php');<br>
+exit();</code>
+
 15.	Définir la partie « front-end » et « back-end » d’une application
 
 La partie « front-end » correspond à l'ensemble des productions qu'un utilisateur pourra voir et aura la possibilité d'intéragir avec. Il s'agirait par exemple de l'espace d'un magasin dans lequel le client peut sa balader (zones prévues à cet effet).<br>
@@ -246,6 +253,22 @@ Cela s'effectue à la fois avec la programmation HTML et le style CSS
 28.	Qu’est-ce que le templating ?
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
+
+Pour ajouter un élément à la fin d'un tableau, on utilise la méthode <code>push()</code> en ciblant le tableau correctement.
+Exemple :
+
+const animals = ['pigs', 'goats', 'sheep'];
+
+const count = animals.push('cows');
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push('chickens', 'cats', 'dogs');
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+
 31.	Qu’est-ce qu’un « media query » ?
 
 Un « media query » est une fonction en CSS permettant de définir le comportement de certains éléments, classes ou ids en fonction de paramètres définis par le concepteur. <br>
@@ -302,6 +325,9 @@ Le tout est de fluidifier son expérience de sorte à ce qu'il revienne ou reste
 
 42.	Qu’est-ce qu’un « mobile first design » ?
 
+Le "mobile first design" consiste à partir de l'affichage mobile en le rendant pertinent et fonctionnel pour ensuite développer les tailles d'écrans plus grandes en modifiant les différents éléments.<br>
+Le but étant de ne pas supprimer d'éléments mais d'en ajouter ou de les déplacer de sorte que le site soit performant et adapté au format mobile.
+
 ## Programmation orientée objet (POO)
 43.	Donner une définition de la programmation orientée objet 
 
@@ -329,9 +355,19 @@ L'encapsulation consiste à regrouper des données au sein d'une même unité. C
 53.	Définir le polymorphisme en POO
 54.	Définir une méthode / classe abstraite ?
 55.	Définir le chaînage de méthodes
+
+Le chaînage de méthodes consiste à agir sur plusieurs classes d'un objet en une instruction.
+
+Exemple :
+
+<code>$objet->methode1()->methode2()</code>
+
 56.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
 57.	Qu’est-ce qu’un « autoload » ?
 58.	Comment appelle-t-on en français les « getters » et les « setters » ?
+
+On appelle en français les accesseurs pour les "getters" et les mutateurs pour les "setters". Le but pour les accesseurs est de récupérer les informations et pour les mutateurs de les modifier selon l'instruction programmée.
+
 59.	Qu’est-ce que la sérialisation en PHP ? 
 
 ## Architecture 
@@ -342,6 +378,9 @@ L'encapsulation consiste à regrouper des données au sein d'une même unité. C
 64.	Quels sont les avantages de l’architecture MVC ?
 65.	Existe-t-il des variantes à l’architecture MVC ?
 66.	Qu’est-ce qu’une API ? Définir l’architecture REST
+
+Une API vient de l'acronyme Application Programming Interface et permet à une application de récupérer des données d'un service tiers.
+Par exemple : une API web peut être utilisée pour interagir avec une base de données ou un service distant via des requêtes HTTP (GET, POST, etc.).
 
 ## Modélisation - Base de données
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise

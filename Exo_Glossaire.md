@@ -213,14 +213,14 @@ Ce langage est utilisé pour concevoir et représenter le contenu d'une page web
 
 19.	Définir CSS
 
-CSS est l'acronyme pour «Cascading Style Sheets» ou en français «feuilles de style en cascade». Ce langage est utilisé pour décrire la présenationt d'un document écrit en HTML ou XML. <br>
+CSS est l'acronyme pour « Cascading Style Sheet s» ou en français « feuilles de style en cascade ». Ce langage est utilisé pour décrire la présenationt d'un document écrit en HTML ou XML. <br>
 Ce langage de programmation décrit la façon dont les éléments doivent être affichés à l'écran, sur papier, à l'oral ou sur d'autres médias.
 Autrement dit, le CSS est le langage qui habille le site web codé en HTML.
 
 20.	Définir Javascript
 
 Le JavaScript, à ne pas confondre avec le Java qui est un autre langage, est un langage de script léger, orienté objet, principalement connu comme le langage de script des pages web.
-Si on devait définir l'importance du JavaScript (abrégé en «JS»), on pourrait dire que l'HTML est la carrosserie d'une voiture, le CSS la couleur de celle-ci et le JS le moteur qui fait avancer la voiture.
+Si on devait définir l'importance du JavaScript (abrégé en « JS »), on pourrait dire que l'HTML est la carrosserie d'une voiture, le CSS la couleur de celle-ci et le JS le moteur qui fait avancer la voiture.
 
 21.	Définir JSON. Dans quel contexte ce format est-il utilisé ? 
 
@@ -343,6 +343,16 @@ On déclare la classe comme suit : <code>Class NomDeLaClasse {}</code>
 Un objet est un élément possédant des caractéristiques qui lui sont propres et définies en amont. Il s'agit de caractéristiques physiques le rendant tangible. (On ne parle pas de son usage)
 
 46.	Définir la notion de propriété / attribut / méthode
+
+En POO, une propriété consiste en une variable définie au sein d'une classe lors de la création d'un objet. Cette variable n'aura pas de valeur qui lui sera donnée mais elle possédera un mot-clé en préfixe :
+ public $user_name;
+De sorte en ajoutant le mot-clé public, on définit son accessibilité depuis l'extérieur de la classe. Donc on pourra récupérer les informations qu'elle contiendra même si on ne se trouve pas dans l'élément qui la gère directement.
+
+Un attribut est une caractéristique de la classe, synonyme de propriété elle désigne les informations stockées. Par exemple, pour un ordinateur, il s'agira de la carte mère, la RAM, etc.
+
+Une méthode consiste en ne action applicable à l'objet. Une action entraine un résultat à la fin de la programmation qui peut être séquentielle, itérative ou conditionnelle.
+
+
 47.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
 48.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
 49.	Qu’est-ce que l’encapsulation ?
@@ -467,7 +477,11 @@ Le RGPD est entré en vigueur le 24 mai 2016 et s'applique depuis le 25 mai 2018
 115.	Quel est l’objectif principal du SEO ?
 116.	Existe-t-il plusieurs types de référencement ? Lesquels ?
 117.	Qu’est-ce que la densité de mots-clés en SEO ?
-118.	Qu’est-ce qu’une balise « alt » ?
+118.	Qu’est-ce qu’un attribut « alt » ?
+
+Un attribut « alt » en HTML permet de donner une description textuelle à une image. Le terme désiné texte alternatif, alternatif dans le cas où l'utilisateur ne pourrait pas accéder à l'image visuellement ou serait dans l'incapacité de voir l'image.
+De ce fait, en donnant une description dans une chaine de caractères à l'attribut alt d'une image, on rend possible la retranscripption vocale du texte permettant à l'utilisateur de comprendre l'élément que l'on a intégré dans notre site internet.
+
 119.	Qu’est-ce que la balise « meta description » ?
 120.	Qu’est-ce que le « nofollow » en SEO ?
 121.	Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?

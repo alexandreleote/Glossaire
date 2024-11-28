@@ -384,6 +384,15 @@ On appelle en français les accesseurs pour les "getters" et les mutateurs pour 
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
 61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
 62.	Qu’est-ce que l’architecture MVC ?
+
+L'architecture MVC est un design pattern utilisé lors de la conception d'un site internet. Il est constitué de trois modules constituant l'acronyme : Modèle-Vue-Contrôleur. Le but est de séparer les modules dans leur fonctionnement et qu'ils remplissent des rôles spécifiques tout en communicant entre eux.
+
+<ul>
+    <li>modèle : données (accès et mise à jour)</li>
+    <li>vue : interface utilisateur (entrées et sorties)</li>
+    <li>contrôleur : gestion des événements et synchronisation</li>
+</ul>
+
 63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
 64.	Quels sont les avantages de l’architecture MVC ?
 65.	Existe-t-il des variantes à l’architecture MVC ?

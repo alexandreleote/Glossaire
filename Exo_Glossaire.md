@@ -229,6 +229,11 @@ On s'en sert stocker des données de manière hiérarchique. On peut alors crée
 On peut utiliser le JSON dans plusieurs cas, dans les APIs REST ou web plus globalement, dans les fichiers de configuration ou encore dans les 'bundles' que l'on trouve dans Symfony par exemple.
 
 22.	Peut-on interpréter du Javascript côté serveur ? Si oui, comment ?
+
+On peut interpréter du Javascript coté serveur notamment grâce à un environnement d'exécution : Node.JS.
+La manière dont cela s'opère est de manière asynchrone, c'est-à-dire que les requêtes seront envoyées mais n'interrompent pas le programme. La réponse sera alors traitée lorsqu'elle sera retournée.
+Ainsi, on rend notre code non bloquant dans son usage en évitant de bloquer notre application monothread durant l'exécution de la requête.
+
 23.	Qu’est-ce qu’un sélecteur CSS ?
 
 Un sélecteur CSS est un élément qui cible une balise HTML pour en modifier les propriétés. On peut cibler une balise <body> qui altèrera le corps du site.
@@ -239,6 +244,11 @@ Si l'on attribue à cette balise un ID ou une CLASS, alors on peut modifier cert
 La balise <a> avec l'attribut href permet de créer un lien hypertexte. Par exemple un lien pour revenir à la page index : *a href="index.html"* entre <> pour qu'elle soit effective.
 
 25.	Qu’est-ce qu’une requête AJAX ?
+
+L'AJAX est une technique de développement web permettant d'actualiser une partie d'une page sans devoir en recharger tout le contenu.
+Acronyme d'Asynchronous Javascript And Xml : l'AJAX est apparu en 1998 mais dont l'usage a été démocratisé que bien plus tard grâce en partie à la bibliothèque open source jQuery ayant intégré cette fonctionnalité.
+Ainsi on peut soumettre des formaulaires sans recharger la page, afficher des propositions dans un champ de recherche lorsqu'on tape les premiers caractères, effectuer une requête en base de données pour mettre à jour un bloc d'une page, consommer une API externe de façon asynchrone au chargement de la page sur une action utilisateur.
+
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
 
 Le sélecteur CSS qui permet de sélectionner tous les éléments est *. <br>
@@ -251,6 +261,9 @@ Il s'agit de rendre un site web adapté et accessible à tous les supports (devi
 Cela s'effectue à la fois avec la programmation HTML et le style CSS 
 
 28.	Qu’est-ce que le templating ?
+
+Le templating est un moyen d'insérer une structure HTML au travers d'un id. Ceci est ignoré du DOM, il ne sera pas interprété et le CSS ne serait pas appliqué.
+
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 
@@ -288,6 +301,10 @@ Ainsi on remplace la couleur bleue initiale de la fonction de surlignage en une 
 Bootstrap est un framework frontend OpenSource permettant de faciliter les modifications de style CSS de sites web responsives en utilisant des classes prédéfinies à intégrer à son code HTML. D'autres framework tels que Tailwind CSS ou Semantic UI, et d'autres encore, sont capables d'en faire autant avec chacun leurs avantages. Tailwind CSS va se concentrer sur des classes précises plutôt que des composants prédéfinis afin de créer des interfaces détaillées sur mesure.
 
 34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
+
+Les deux méthodes qui peuvent lui être associées sont la méthode "POST" et la méthode "GET".
+La première envoie les informations renseignées dans le formulaire à l'URL définie dans l'action du formulaire. Les données ne seront pas visibles directement dans l'URL.
+Avec la méthode "GET", les données seront visibles dans l'URL en tant que paramètres après le point d'interrogation.
 
 ## UX UI
 35.	Quelle est la différence entre UX Design et UI Design ?
@@ -383,6 +400,12 @@ On appelle en français les accesseurs pour les "getters" et les mutateurs pour 
 ## Architecture 
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
 61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
+
+Le design pattern (patron de conception) est un élément important en POO : il a pour but de répondre à un problème technique avec une infrastructure logicielle faite de quelques classes.
+- Le modèle composite, qui sert à mettre en œuvre une structure arborescente. Il peut s’agir de la représentation d’un dossier avec ses sous-dossiers et les fichiers qu’on y trouve. Les feuilles et les composites suivent un modèle qui fait appel à la même interface logicielle. La manipulation est la même à chaque utilisation.
+- Un autre modèle important est le singleton. Il limite l’instanciation d’une classe à un seul objet. Il est utilisé pour qu’un seul objet coordonne les opérations à l’intérieur d’un système donné. Il est surtout utilisé pour un système plus rapide ou qui occupe moins de mémoire. Il s’agit aussi d’un système avec peu d’objets. Les itérateurs et les adaptateurs comptent aussi parmi les principaux modèles de design pattern.
+- Fabrique est un patron de conception de création qui définit une interface pour créer des objets dans une classe mère, mais délègue le choix des types d’objets à créer aux sous-classes.
+
 62.	Qu’est-ce que l’architecture MVC ?
 
 L'architecture MVC est un design pattern utilisé lors de la conception d'un site internet. Il est constitué de trois modules constituant l'acronyme : Modèle-Vue-Contrôleur. Le but est de séparer les modules dans leur fonctionnement et qu'ils remplissent des rôles spécifiques tout en communicant entre eux.

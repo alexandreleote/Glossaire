@@ -417,6 +417,10 @@ L'architecture MVC est un design pattern utilisé lors de la conception d'un sit
 </ul>
 
 63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
+
+Afin d'être plus précis, le Modèle est la couche traitant directement avec la base de données en préparant les requêtes SQL qui lui seront envoyées.
+Le Controller se charge quant à lui de répondre aux actions de l'utilisateur sur la couche View. Ainsi, il transmet l'information au Modèle avant de remonter l'information à la View. Le Controller sert à gérer les demandes et contrôler ce qui est renvoyé également avant que les informations ne soient affichées sur la View.
+
 64.	Quels sont les avantages de l’architecture MVC ?
 65.	Existe-t-il des variantes à l’architecture MVC ?
 66.	Qu’est-ce qu’une API ? Définir l’architecture REST

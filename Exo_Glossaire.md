@@ -13,149 +13,221 @@
 - [English](#english)
 
 ## Général
-1.	Quel est l’environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
+1. Quel est l'environnement à installer pour exécuter un script PHP ? Citer 2 exemples de logiciels permettant ce contexte
 
-L'environnement à installer pour exécuter un script PHP est Apache qui permet d'interpréter ce langage. On peut installer Laragon, WAMP, XAMP pour ce contexte.
+L'environnement à installer pour exécuter un script PHP est Apache qui permet d'interpréter ce langage. On peut installer Laragon, WAMP, XAMPP pour ce contexte.
 Il ne faut pas faire cohabiter deux versions de logiciels, cela créerait des conflits.
     
-2.	Qu’est-ce qu’un algorithme ?
+2. Qu'est-ce qu'un algorithme ?
 
 Un algorithme est une suite d'instructions données afin de résoudre un problème que l'on a posé initialement.
   
-3.	Qu’est-ce qu’une variable ? Par quel symbole est préfixée une variable en PHP ?
+3. Qu'est-ce qu'une variable ? Par quel symbole est préfixée une variable en PHP ?
 
-Une variable est un espace de stockage que l'on crée afin de pouvoir y stocker une valeur numérique, une chaîne de caractères, un tableau, etc... 
-Elle est symbolisée par le signe "$" que l'on écrit avant de nommer la variable.
+Une variable est un espace de stockage que l'on crée afin de pouvoir y stocker une valeur numérique, une chaîne de caractères, un tableau, etc. 
+Elle est symbolisée par le signe `$` que l'on écrit avant de nommer la variable.
 
-4.	Qu’est-ce que la portée d’une variable ?
+4. Qu'est-ce que la portée d'une variable ?
 
 La portée d'une variable est la zone d'effet de la variable dès qu'elle est déclarée. C'est-à-dire en d'autres termes, l'impact dans la portion de code où elle est utilisée.
 Elle peut être locale ou globale (cette dernière s'applique à tous les blocs de code, dont les classes).
   
-5.	Qu’est-ce qu’une constante ? Quelle est la différence avec une variable ?
+5. Qu'est-ce qu'une constante ? Quelle est la différence avec une variable ?
 
-Une constante est un espace de mémoire dont la valeur est définie et qui ne sera pas modifiée par la suite. <br>
-A l'inverse la variable est un élément de données dont la valeur évolue au cours de l'exécution d'un programme.
+Une constante est un espace de mémoire dont la valeur est définie et qui ne sera pas modifiée par la suite.  
+À l'inverse, la variable est un élément de données dont la valeur évolue au cours de l'exécution d'un programme.
 
-6.	Qu’est-ce qu’une superglobale, combien en existent-ils et donner un exemple d’utilisation
+6. Qu'est-ce qu'une superglobale, combien en existent-ils et donner un exemple d'utilisation
 
-Il s'agit d'une variable prédéfinie permettant d'accéder à des données stockées à l'extérieur du programme dans lequelle la superglobale est appelée. Elle permet de récupérer des données provenant de formulaires, de cookies, de sesssions ou encore d'environnement d'exécution.<br>
-Il existe neuf superglobales en PHP :<br>
-<ul>
-    <li><code>$GLOBALS</code> : permet de parcourir rapidement l’ensemble des variables globales définies dans un script.</li>
-    function test() {<br>
-    $foo = "local variable";<br>
-    echo '$foo in global scope: ' . $GLOBALS["foo"] . "\n";<br>
-    echo '$foo in current scope: ' . $foo . "\n"; }
-    $foo = "Example content";<br>
-    test();<br><br>
-    <li><code>$_SERVER</code> : contient des variables définies par le serveur utilisé ainsi que des informations relatives au script.</li>
-    echo $_SERVER['SERVER_NAME'];<br><br>
-    <li><code>$_GET</code> : stocke les valeurs lorsque le formulaire sera envoyé via la méthode GET.</li>
-    echo 'Hello ' . htmlspecialchars($_GET["name"]) . '!';<br><br>
-    <li><code>$_POST</code> : stocke les valeurs lorsque le formulaire sera envoyé via la méthode POST.</li>
-    echo 'Bonjour, tu t\'appelles ' .$_POST['prenom'];<br><br>
-    <li><code>$_FILES</code> : contient les informations relatives aux fichiers téléchargés via un formulaire.</li>
-    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "uploads/" . basename($_FILES["fileToUpload"]["name"]));<br><br>
-    <li><code>$_COOKIE</code> : est un tableau associatif contenant les variables passées via des cookies HTTP.</li>
-    setcookie("utilisateur", "Jean", time() + (86400 * 30), "/");<br>
-    echo isset($_COOKIE["utilisateur"]) ? $_COOKIE["utilisateur"] : "Le cookie n'est pas défini.";<br><br>
-    <li><code>$_SESSION</code> : est un tableau associatif contenant les variables de session.</li>
-    session_start(); $_SESSION["utilisateur"] = "Jean";<br>
-    session_start(); echo isset($_SESSION["utilisateur"]) ? $_SESSION["utilisateur"] : "Aucun utilisateur.";<br><br>
-    <li><code>$_REQUEST</code> : est un tableau associatif contenant les variables de <code>$_GET</code>, <code>$_POST</code>, et <code>$_COOKIE</code>.</li>
-    echo isset($_REQUEST["nom"]) ? $_REQUEST["nom"] : "Paramètre non défini.";<br><br>
-    <li><code>$_ENV</code> : contient des informations liées à l'envrionnement dans lequel s'exécute le script.</li>
-    $_ENV["APP_ENV"] = "production";<br>
-    echo isset($_ENV["APP_ENV"]) ? $_ENV["APP_ENV"] : "Variable non définie.";<br><br>
-</ul>
+Il s'agit d'une variable prédéfinie permettant d'accéder à des données stockées à l'extérieur du programme dans lequel la superglobale est appelée. Elle permet de récupérer des données provenant de formulaires, de cookies, de sessions ou encore d'environnement d'exécution.
 
-7.	Quels sont les différents types (primitifs) que l’on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d’une variable sans valeur)
+Il existe neuf superglobales en PHP :
+
+- `$GLOBALS` : permet de parcourir rapidement l'ensemble des variables globales définies dans un script.
+```php
+function test() {
+    $foo = "local variable";
+    echo '$foo in global scope: ' . $GLOBALS["foo"] . "\n";
+    echo '$foo in current scope: ' . $foo . "\n";
+}
+$foo = "Example content";
+test();
+```
+
+- `$_SERVER` : contient des variables définies par le serveur utilisé ainsi que des informations relatives au script.
+```php
+echo $_SERVER['SERVER_NAME'];
+```
+
+- `$_GET` : stocke les valeurs lorsque le formulaire sera envoyé via la méthode GET.
+```php
+echo 'Hello ' . htmlspecialchars($_GET["name"]) . '!';
+```
+
+- `$_POST` : stocke les valeurs lorsque le formulaire sera envoyé via la méthode POST.
+```php
+echo 'Bonjour, tu t\'appelles ' . $_POST['prenom'];
+```
+
+- `$_FILES` : contient les informations relatives aux fichiers téléchargés via un formulaire.
+```php
+move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "uploads/" . basename($_FILES["fileToUpload"]["name"]));
+```
+
+- `$_COOKIE` : est un tableau associatif contenant les variables passées via des cookies HTTP.
+```php
+setcookie("utilisateur", "Jean", time() + (86400 * 30), "/");
+echo isset($_COOKIE["utilisateur"]) ? $_COOKIE["utilisateur"] : "Le cookie n'est pas défini.";
+```
+
+- `$_SESSION` : est un tableau associatif contenant les variables de session.
+```php
+session_start();
+$_SESSION["utilisateur"] = "Jean";
+echo isset($_SESSION["utilisateur"]) ? $_SESSION["utilisateur"] : "Aucun utilisateur.";
+```
+
+- `$_REQUEST` : est un tableau associatif contenant les variables de `$_GET`, `$_POST`, et `$_COOKIE`.
+```php
+echo isset($_REQUEST["nom"]) ? $_REQUEST["nom"] : "Paramètre non défini.";
+```
+
+- `$_ENV` : contient des informations liées à l'environnement dans lequel s'exécute le script.
+```php
+$_ENV["APP_ENV"] = "production";
+echo isset($_ENV["APP_ENV"]) ? $_ENV["APP_ENV"] : "Variable non définie.";
+```
+
+7. Quels sont les différents types (primitifs) que l'on peut associer à une variable en PHP ? Les citer et en donner des exemples (ne pas oublier le type d'une variable sans valeur)
 
 Il existe 8 types (primitifs) que l'on peut associer à une variable :
-- int : entier
-  
-  | $age = 42;  // Type : entier<br>
-  
-- float : nombre décimal
-  
-  | $price = 19.99;  // Type : flottant<br>
-  
-- string : chaîne de caractères
-  
-  | $name = "Alexandre";  // Type : chaîne de caractères<br>
-  
-- bool : booléen (vrai/faux)
-  
-  | $isCoding = true;  // Type : booléen<br>
-  
-- array : tableau
-  
-  | $manga = array("DemonSlayer", "Shangri-La Frontier", "Solo Leveling");  // Type : tableau indexé<br>
-    $personne = [
-      "nom" => "Alexandre",
-      "age" => 29
-      ];  // Type : tableau associatif<br>
-  
-- object : objet
-  
-  | class Personne { public $nom; public $age; }<br>
-    $personne = new Personne();  // Type : objet<br>
-    $personne->nom = "Alice";<br>
-    $personne->age = 25;<br>
-  
-- NULL : absence de valeur
-  
-  | $despair = null;  // Type : NULL<br>
-  
-- resource : ressource (externe)
-  
-  | $folder = fopen("exemple.txt", "r");  // Type : resource<br>
 
-8.	Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+- `int` : entier
+```php
+$age = 42;  // Type : entier
+```
 
-Il existe les tableaux associatifs et les tableaux à index numériques. <br>
-Dans le premier cas, il s'agit d'un tableau dont les indices sont des chaînes de caractères.<br>
+- `float` : nombre décimal
+```php
+$price = 19.99;  // Type : flottant
+```
+
+- `string` : chaîne de caractères
+```php
+$name = "Alexandre";  // Type : chaîne de caractères
+```
+
+- `bool` : booléen (vrai/faux)
+```php
+$isCoding = true;  // Type : booléen
+```
+
+- `array` : tableau
+```php
+$manga = array("DemonSlayer", "Shangri-La Frontier", "Solo Leveling");  // Type : tableau indexé
+$personne = [
+    "nom" => "Alexandre",
+    "age" => 29
+];  // Type : tableau associatif
+```
+
+- `object` : objet
+```php
+class Personne {
+    public $nom;
+    public $age;
+}
+$personne = new Personne();  // Type : objet
+$personne->nom = "Alice";
+$personne->age = 25;
+```
+
+- `NULL` : absence de valeur
+```php
+$despair = null;  // Type : NULL
+```
+
+- `resource` : ressource (externe)
+```php
+$folder = fopen("exemple.txt", "r");  // Type : resource
+```
+
+8. Existe-t-il plusieurs types de tableaux en PHP, si oui lesquels ?
+
+Il existe les tableaux associatifs et les tableaux à index numériques.  
+Dans le premier cas, il s'agit d'un tableau dont les indices sont des chaînes de caractères.  
 Dans le deuxième cas, il s'agit d'un tableau dont les indices sont des valeurs numériques.
 
 9.	Quelles sont les différentes structures de contrôles qu’il existe en algorithmie ? Donner un exemple pour chacune d’entre elles
 
-Il existe trois grandes structures de contrôles en algorithmie : les structures séquentielles, les structures conditionnelles et les structures itératives.<br><br>
-Par exemple pour les *structures séquentielles*, il  s'agit d'exécuter les instructions dans l'ordre où elles apparaissent :<br>
-a = 5<br>
-b = 10<br>
-c = a + b<br>
-print(c)<br>
-<br>
-Pour les *structures conditionnelles*, on désire vérifier une information et retourner un résultat de manière à ce que l'information vérifiée corresponde au résultat attendu ou non:<br><br>
-a = 5;<br>
-if (a > 0) {<br>
-    echo "a est positif";<br>
-} else if (a < 0) {<br>
-    echo "a est négatif"<br>
-} else {<br>
-    echo "a est nul" }<br>
-<br>
-Enfin pour les *structures itératives*, on souhaite répéter une séquence d'instructions un nombre de fois non défini jusqu'à remplir la condition.<br>
-Il exsite trois types de boucles : la boucle <code>for</code>, la boucle <code>while</code> et la boucle <code>foreach</code>.<br>
-<br>
-Méthode <code>for</code> :<br>
-for($i = 1; $i <= 10; $i++) {<br>
-    echo $i." ";}<br>
-<br>
-Méthode <code>while</code> :<br>
-$i = 1;<br>
-while($i <= 10) {<br>
-    echo $i." ";<br>
-    $i++;}<br>
-<br>
-Méthode <code>foreach</code> :<br>
-$range = range(1,10);<br>
-var_dump($range);<br>
-<br>
-foreach(range(1,10) as $v) {<br>
-    echo $v." ";}<br>
+Il existe trois grandes structures de contrôles en algorithmie : les structures séquentielles, les structures conditionnelles et les structures itératives.
 
+
+**1. Programmation séquentielle**
+- Les instructions sont exécutées les unes après les autres, dans un ordre prédéfini
+- Chaque instruction est traitée séquentiellement, de haut en bas
+- Exemple en JavaScript :
+```javascript
+// Instructions exécutées dans l'ordre
+console.log("Première étape");
+let x = 5;
+let y = x * 2;
+console.log("Deuxième étape");
+```
+
+**2. Programmation conditionnelle**
+- Utilise des structures de contrôle pour prendre des décisions
+- Les instructions sont exécutées uniquement si certaines conditions sont remplies
+- Mots-clés principaux : `if`, `else`, `elseif`
+- Exemple en PHP :
+```php
+$age = 18;
+if ($age < 18) {
+    echo "Mineur";
+} elseif ($age == 18) {
+    echo "Tout juste majeur";
+} else {
+    echo "Majeur";
+}
+```
+
+**3. Programmation itérative**
+- Permet de répéter un bloc de code plusieurs fois
+- Utilise des boucles (`for`, `while`)
+- Idéal pour traiter des collections ou répéter des actions
+- Exemples en JavaScript et PHP :
+```javascript
+// Boucle for en JavaScript
+for (let i = 0; i < 5; i++) {
+    console.log(`Itération ${i}`);
+}
+
+// Boucle while en JavaScript
+let compteur = 0;
+while (compteur < 3) {
+    console.log(`Compteur : ${compteur}`);
+    compteur++;
+}
+```
+
+```php
+// Boucle for en PHP
+for ($i = 1; $i <= 5; $i++) {
+    echo "Itération $i ";
+}
+
+// Boucle while en PHP
+$compteur = 0;
+while ($compteur < 3) {
+    echo "Compteur : $compteur ";
+    $compteur++;
+}
+```
+
+**Caractéristiques principales :**
+- Séquentielle : ordre strict, pas de saut
+- Conditionnelle : décisions basées sur des conditions
+- Itérative : répétition de blocs de code
 
 10.	Quelle est la fonction PHP permettant de demander la longueur d’une chaîne de caractères ?
 
@@ -251,9 +323,9 @@ Ainsi on peut soumettre des formaulaires sans recharger la page, afficher des pr
 
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
 
-Le sélecteur CSS qui permet de sélectionner tous les éléments est *. <br>
-Pour une classe cela donne : .class{ } <br>
-Pour un identifiant spécifique : #id{ } 
+Le sélecteur CSS qui permet de sélectionner tous les éléments est `*`.  
+Pour une classe : `.class { }`  
+Pour un identifiant spécifique : `#id { }`
 
 27.	Définir le responsive design
 
@@ -262,12 +334,32 @@ Cela s'effectue à la fois avec la programmation HTML et le style CSS
 
 28.	Qu’est-ce que le templating ?
 
-Le templating est un moyen d'insérer une structure HTML au travers d'un id. Ceci est ignoré du DOM, il ne sera pas interprété et le CSS ne serait pas appliqué.
+Le templating est un moyen de générer du code HTML en incluant des variables, des boucles, des conditionnelles... dans un fichier HTML.  
+Il s'agit de définir un modèle HTML qui sera remplacé ultérieurement par des données que l'on souhaite afficher.  
+Cela permet d'ajouter des éléments HTML sans avoir à modifier le code source de la page.  
+
+Exemple :
+
+On a un fichier template.html :
 
 29.	Qu’est-ce qu’une fonction anonyme en Javascript ?
+
+Une fonction anonyme en JavaScript est une fonction qui est définie sans nom et est utilisée une seule fois. 
+
+Elle est souvent utilisée comme une fonction de rappel ou comme une fonction qui est passée en tant qu'argument à une autre fonction.
+
+Exemple :
+
+const sayHello = function() {
+    console.log('Bonjour');
+};
+
+sayHello();
+
+
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 
-Pour ajouter un élément à la fin d'un tableau, on utilise la méthode <code>push()</code> en ciblant le tableau correctement.
+Pour ajouter un élément à la fin d'un tableau, on utilise la méthode `push()` en ciblant le tableau correctement.
 Exemple :
 
 const animals = ['pigs', 'goats', 'sheep'];
@@ -284,21 +376,30 @@ console.log(animals);
 
 31.	Qu’est-ce qu’un « media query » ?
 
-Un « media query » est une fonction en CSS permettant de définir le comportement de certains éléments, classes ou ids en fonction de paramètres définis par le concepteur. <br>
-Par exemple, on peut définir la taille minimale d'un écran et la taille maximale dans lesquelles le comportement de ces éléments agissent d'une manière définie, on peut penser au responsive design sur mobile et tablettes qui diffère du format desktop.<br>
+Un « media query » est une fonction en CSS permettant de définir le comportement de certains éléments, classes ou ids en fonction de paramètres définis par le concepteur.  
+Par exemple, on peut définir la taille minimale d'un écran et la taille maximale dans lesquelles le comportement de ces éléments agissent d'une manière définie, on peut penser au responsive design sur mobile et tablettes qui diffère du format desktop.  
 Ainsi, on peut favoriser les performances d'affichage de ces éléments et l'adapter au format pour rendre l'expérience utilisateur optimale.
 
 32.	Qu’est-ce qu’un pseudo élément en CSS ?
 
-Un pseudo élément en CSS est une fonction permettant de styliser des parties définies d'un élément HTML. Par exemple, pour modifier le surlignage de son texte sur son site web pour ne pas garder celui de base (de couleur bleue), il faut alors écrire dans son CSS ceci : <br>
-<code>::selection {
-    background-color: black;<br>
-    color: white; }</code><br>
-Ainsi on remplace la couleur bleue initiale de la fonction de surlignage en une couleur noire et en changement également la couleur du texte pour s'assurer de la lisibilité. Il faut ajouter -moz- pour définir cela sur les navigateurs mozilla également sinon on perd notre effet et altère l'expérience utilisateur.
+Un pseudo élément en CSS est une fonction permettant de styliser des parties définies d'un élément HTML. Par exemple, pour modifier le surlignage de son texte sur son site web pour ne pas garder celui de base (de couleur bleue), il faut alors écrire dans son CSS :
+
+```css
+::selection {
+    background-color: black;
+    color: white;
+}
+```
+
+Ainsi on remplace la couleur bleue initiale de la fonction de surlignage en une couleur noire et en changeant également la couleur du texte pour s'assurer de la lisibilité. Il faut ajouter `-moz-` pour définir cela sur les navigateurs Mozilla également sinon on perd notre effet et altère l'expérience utilisateur.
 
 33.	Qu’est-ce que Bootstrap ? Donner d’autres exemples équivalent
 
-Bootstrap est un framework frontend OpenSource permettant de faciliter les modifications de style CSS de sites web responsives en utilisant des classes prédéfinies à intégrer à son code HTML. D'autres framework tels que Tailwind CSS ou Semantic UI, et d'autres encore, sont capables d'en faire autant avec chacun leurs avantages. Tailwind CSS va se concentrer sur des classes précises plutôt que des composants prédéfinis afin de créer des interfaces détaillées sur mesure.
+Bootstrap est un framework frontend OpenSource qui permet de faciliter la mise en forme de sites web responsives. Il fournit des classes prédéfinies qui peuvent être utilisées pour modifier le style CSS de son code HTML. 
+
+D'autres framework tels que Tailwind CSS, Semantic UI, Bulma, Foundation, et d'autres encore, sont capables de proposer des fonctionnalités similaires. 
+
+Tailwind CSS, par exemple, propose des classes plus précises pour créer des interfaces détaillées sur mesure, tandis que Bulma propose des composants prédéfinis pour créer des interfaces plus rapides.
 
 34.	Quand un formulaire HTML est créé, quelles sont les 2 méthodes qui peuvent lui être associées ? Donner la différence entre ces 2 méthodes
 
@@ -361,26 +462,55 @@ Un objet est un élément possédant des caractéristiques qui lui sont propres 
 
 46.	Définir la notion de propriété / attribut / méthode
 
-En POO, une propriété consiste en une variable définie au sein d'une classe lors de la création d'un objet. Cette variable n'aura pas de valeur qui lui sera donnée mais elle possédera un mot-clé en préfixe :
- public $user_name;
-De sorte en ajoutant le mot-clé public, on définit son accessibilité depuis l'extérieur de la classe. Donc on pourra récupérer les informations qu'elle contiendra même si on ne se trouve pas dans l'élément qui la gère directement.
+En POO, une propriété est une variable qui est définie au sein d'une classe lors de la création d'un objet. 
+Exemple : dans la classe Voiture, la propriété "marque" aura pour valeur "Peugeot" pour l'objet "maVoiture".<br>
 
-Un attribut est une caractéristique de la classe, synonyme de propriété elle désigne les informations stockées. Par exemple, pour un ordinateur, il s'agira de la carte mère, la RAM, etc.
+Un attribut est une caractéristique de la classe, synonyme de propriété. 
+Exemple : pour un ordinateur, il s'agira de la carte mère, la RAM, etc.<br>
 
-Une méthode consiste en ne action applicable à l'objet. Une action entraine un résultat à la fin de la programmation qui peut être séquentielle, itérative ou conditionnelle.
+Une méthode consiste en une action applicable à l'objet. 
+Exemple : dans la classe Voiture, la méthode "demarrer()" permettra d'allumer le moteur de l'objet "maVoiture".
 
 
 47.	Qu’est-ce que la visibilité d’une propriété ou d’une méthode ? Citer les différents types de visibilité
+
+La visibilité d'une propriété ou d'une méthode est la définition de l'accès qui y est possible. 
+
+Les différents types de visibilité sont : 
+- public : la propriété ou la méthode est accessible de l'extérieur de la classe et de ses classes filles.
+- private : la propriété ou la méthode est accessible uniquement de l'intérieur de la classe et non des classes filles.
+- protected : la propriété ou la méthode est accessible de l'intérieur de la classe et de ses classes filles.
+
+
 48.	Quelle est la méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe ?
+
+La méthode spécifique utilisée pour créer un nouvel objet à partir d’une classe est la méthode `new`. 
+
+Exemple : `$monObjet = new MaClasse();`
+
+
 49.	Qu’est-ce que l’encapsulation ?
 
-L'encapsulation consiste à regrouper des données au sein d'une même unité. Ceci de manière à protéger les données contre l'extérieur. On définit les niveaux d'accès aux données suivant des mots-clés <code>public</code>, <code>private</code> et <code>protected</code>.<br> 
+L'encapsulation consiste à regrouper des données et des comportements au sein d'une même unité, pour en contrôler l'accès et la modification. 
+Cela permet de protéger les données contre l'extérieur, en définissant les niveaux d'accès suivant des mots-clés <code>public</code>, <code>private</code> et <code>protected</code>.<br>
 
 50.	Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
 51.	Définir l’opérateur de résolution de portée
 52.	Définir une méthode / propriété statique
+
+Une méthode statique est une méthode qui est liée à une classe et non à un objet.<br>
+Elle est donc accessible sans avoir à instancier la classe.<br> 
+Les propriétés statiques sont quant à elles des propriétés liées à une classe et non à un objet. <br>
+Les propriétés statiques sont en lecture seule, c'est-à-dire qu'elles ne peuvent pas être modifiées une fois la classe instanciée.
+
 53.	Définir le polymorphisme en POO
 54.	Définir une méthode / classe abstraite ?
+
+Une méthode ou classe abstraite consiste à déclarer une classe ou une méthode sans la définir. <br>
+Cela signifie que la classe abstraite ne peut pas être instanciée directement et qu'elle ne peut contenir que des méthodes abstraites. <br>
+Les classes abstraites sont utilisées pour établir des liens entre les classes et pour organiser l'héritage. <br>
+Les méthodes abstraites sont des méthodes qui ne sont pas définies mais qui doivent être définies dans les classes qui héritent de la classe abstraite.
+
 55.	Définir le chaînage de méthodes
 
 Le chaînage de méthodes consiste à agir sur plusieurs classes d'un objet en une instruction.
@@ -390,43 +520,128 @@ Exemple :
 <code>$objet->methode1()->methode2()</code>
 
 56.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
+
+La méthode __toString() est une méthode qui permet de définir comment un objet doit être converti en string.<br>
+Il existe d'autres méthodes magiques qui sont appelées automatiquement par PHP en fonction de l'usage de l'objet. <br>
+
+Les méthodes magiques sont :
+- __construct() : La méthode **__construct()** est lancée lors de la création d'un objet. Elle permet de configurer l'objet en lui attribuant des valeurs par défaut.
+- __destruct() : La méthode **__destruct()** est exécutée lorsque l'objet est détruit. Elle permet de libérer les ressources utilisées par l'objet.
+- __set() : La méthode **__set()** est déclenchée lorsqu'une propriété inexistante est assignée. Elle permet de gérer l'assignation de valeurs à des propriétés inconnues.
+- __get() : La méthode **__get()** est exécutée lorsque l'on accède à une propriété inexistante. Elle permet de gérer l'accès à des propriétés inconnues.
+- __isset() : La méthode **__isset()** est appelée lorsque l'on teste l'existence d'une propriété avec l'opérateur isset(). Elle permet de définir le comportement de isset() pour les propriétés de l'objet.
+- __unset() : La méthode **__unset()** est exécutée lorsque l'on supprime une propriété avec l'opérateur unset(). Elle permet de définir le comportement de unset() pour les propriétés de l'objet.
+- __sleep() : La méthode **__sleep()** est exécutée lorsque l'on sérialise un objet. Elle permet de définir les propriétés qui doivent être sauvegardées.
+- __wakeup() : La méthode **__wakeup()** est exécutée lorsque l'on désérialise un objet. Elle permet de définir les actions à réaliser lors de la désérialisation.
+- __invoke() : La méthode **__invoke()** est lancée lorsque l'on utilise un objet comme fonction. Elle permet de définir le comportement de l'objet lorsqu'il est utilisé comme fonction.
+- __set_state() : La méthode **__set_state()** est exécutée lorsque l'on instancie un objet à partir d'un tableau. Elle permet de définir comment l'objet doit être instancié.
+- __clone() : La méthode **__clone()** est exécutée lorsque l'on clone un objet. Elle permet de définir le comportement de l'objet lorsqu'il est cloné.
+- __debugInfo() : La méthode **__debugInfo()** est exécutée lorsque l'on passe un objet en paramètre d'une fonction var_dump(). Elle permet de définir les informations qui doivent être affichées lors de la mise à jour de l'objet.
+
+
 57.	Qu’est-ce qu’un « autoload » ?
+
+Un « autoload » consiste à charger des classes et des fichiers en fonction de leur nom.<br>
+Cela permet de ne pas avoir à inclure des fichiers et des classes manuellement.
+
 58.	Comment appelle-t-on en français les « getters » et les « setters » ?
 
-On appelle en français les accesseurs pour les "getters" et les mutateurs pour les "setters". Le but pour les accesseurs est de récupérer les informations et pour les mutateurs de les modifier selon l'instruction programmée.
+On appelle en français les accesseurs pour les "getters" et les mutateurs pour les "setters".<br>
+Le but pour les accesseurs est de récupérer les informations et pour les mutateurs de les modifier selon l'instruction programmée.
 
 59.	Qu’est-ce que la sérialisation en PHP ? 
 
 ## Architecture 
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
+
+L'architecture client/serveur est une forme d'architecture applicative qui permet d'interconnecter des ordinateurs entre eux. 
+Un client est un ordinateur qui envoie des requêtes à un serveur qui les exécute. Les clients envoient des requêtes au serveur qui les traite et leur envoie des réponses. 
+Les clients n'ont pas accès directement aux ressources du serveur, mais peuvent y accéder via des requêtes.<br>
+On peut interroger le serveur en envoyant des requêtes HTTP (HyperText Transfer Protocol). L'acronyme de ce type de requête est HTTP.<br>
+Si on ajoute un "S" à cet acronyme, on obtient HTTPS. HTTPS est un protocole de communication qui sécurise les échanges entre un client et un serveur en encryptant les données envoyées et reçues.
+
 61.	Donner la définition d’un design pattern. Citer au moins 3 exemples de design pattern
 
-Le design pattern (patron de conception) est un élément important en POO : il a pour but de répondre à un problème technique avec une infrastructure logicielle faite de quelques classes.
-- Le modèle composite, qui sert à mettre en œuvre une structure arborescente. Il peut s’agir de la représentation d’un dossier avec ses sous-dossiers et les fichiers qu’on y trouve. Les feuilles et les composites suivent un modèle qui fait appel à la même interface logicielle. La manipulation est la même à chaque utilisation.
-- Un autre modèle important est le singleton. Il limite l’instanciation d’une classe à un seul objet. Il est utilisé pour qu’un seul objet coordonne les opérations à l’intérieur d’un système donné. Il est surtout utilisé pour un système plus rapide ou qui occupe moins de mémoire. Il s’agit aussi d’un système avec peu d’objets. Les itérateurs et les adaptateurs comptent aussi parmi les principaux modèles de design pattern.
-- Fabrique est un patron de conception de création qui définit une interface pour créer des objets dans une classe mère, mais délègue le choix des types d’objets à créer aux sous-classes.
+Le design pattern (patron de conception) est un élément important en POO : il a pour but de répondre à un problème technique avec une infrastructure logicielle faite de quelques classes. Les design patterns sont des solutions éprouvées pour résoudre des problèmes couramment rencontrés lors de la conception d'un programme.
+
+**Catégories de design patterns :**
+- *Patterns de création* : gèrent l'instanciation des objets (Singleton, Fabrique)
+- *Patterns structurels* : organisent les relations entre les objets (Composite, Adaptateur)
+- *Patterns comportementaux* : définissent la communication entre objets (Observateur, Stratégie)
+
+**Exemples de design patterns :**
+
+1. **Modèle Composite** : 
+   - Permet de traiter un groupe d'objets de la même manière qu'un objet unique
+   - Exemple : Représenter une structure de fichiers avec dossiers et sous-dossiers
+   - Les feuilles et les composites suivent un modèle qui fait appel à la même interface logicielle
+   - La manipulation est la même à chaque utilisation
+
+2. **Singleton** : 
+   - Limite l'instanciation d'une classe à un seul objet
+   - Utilisé pour coordonner les opérations à l'intérieur d'un système donné
+   - Exemple : Gérer une connexion de base de données unique pour toute l'application
+
+3. **Fabrique** : 
+   - Patron de conception de création
+   - Définit une interface pour créer des objets dans une classe mère
+   - Délègue le choix des types d'objets à créer aux sous-classes
+   - Exemple : Créer différents types de documents (PDF, Word) via une fabrique de documents
+
+**Avantages des design patterns :**
+- Réutilisation de solutions éprouvées
+- Amélioration de la maintenabilité du code
+- Standardisation des approches de conception
+- Facilitation de la communication entre développeurs
 
 62.	Qu’est-ce que l’architecture MVC ?
 
-L'architecture MVC est un design pattern utilisé lors de la conception d'un site internet. Il est constitué de trois modules constituant l'acronyme : Modèle-Vue-Contrôleur. Le but est de séparer les modules dans leur fonctionnement et qu'ils remplissent des rôles spécifiques tout en communicant entre eux.
+L'architecture MVC (Modèle-Vue-Contrôleur) est un design pattern qui structure les éléments d'un site web en trois parties distinctes : 
+- le modèle, 
+- la vue, 
+- le contrôleur. 
 
-<ul>
-    <li>modèle : données (accès et mise à jour)</li>
-    <li>vue : interface utilisateur (entrées et sorties)</li>
-    <li>contrôleur : gestion des événements et synchronisation</li>
-</ul>
+Le modèle gère les données, la vue s'occupe de l'interface utilisateur et le contrôleur orchestre les interactions entre les deux. <br>
+Cela permet de séparer les préoccupations de l'application en trois parties distinctes, ce qui facilite la maintenance et la mise à jour.
 
 63.	Quel est le rôle de chaque couche du design pattern MVC : Model, View, Controller ?
 
-Afin d'être plus précis, le Modèle est la couche traitant directement avec la base de données en préparant les requêtes SQL qui lui seront envoyées.
-Le Controller se charge quant à lui de répondre aux actions de l'utilisateur sur la couche View. Ainsi, il transmet l'information au Modèle avant de remonter l'information à la View. Le Controller sert à gérer les demandes et contrôler ce qui est renvoyé également avant que les informations ne soient affichées sur la View.
+Afin d'être plus précis, le Modèle est la couche qui gère les données de l'application : elle stocke, modifie et supprime les données en interagissant directement avec la base de données. Elle prépare les requêtes SQL qui lui sont envoyées.
+
+Le Controller est la couche qui répond aux actions de l'utilisateur sur la couche View. Il reçoit les requêtes de l'utilisateur, les traite et les transmet au Modèle. Après cela, il prend en charge les résultats du Modèle et les transmet à la View.
+
+Le Controller est donc le lien entre le Modèle et la View, servant à gérer les demandes et contrôler ce qui est renvoyé également avant que les informations ne soient affichées sur la View. Il est donc le maître d'oeuvre de l'application, coordonnant les interactions entre les différentes couches.
 
 64.	Quels sont les avantages de l’architecture MVC ?
+
+Les avantages de l'architecture MVC sont :
+- Separation des responsabilités : chaque partie a un rôle qui lui est propre et n'interfère pas dans celui des autres.
+- Facilitation de la maintenance et de la mise à jour : comme elles sont isolées les unes des autres, la mise à jour de chacune peut se faire individuellement au besoin.
+- Facilitation de la testabilité : de cette façon, on peut plus facilement cibler les composantes de l'application et tester seulement celles qui ont besoin d'une modification.
+
 65.	Existe-t-il des variantes à l’architecture MVC ?
+
+Il existe plusieurs variantes qui sont nées de l'architecture MVC, notamment les architectures MVVM et MVP.
+
+MVVM (Modèle-Vue-VueModèle) est une variante de l'architecture MVC qui se distingue par la division des responsabilités : 
+- le Modèle gère les données, 
+- la Vue gère l'affichage de l'interface utilisateur et 
+- la VueModèle gère l'affichage de l'interface utilisateur et le Modèle. <br>
+Cela permet de mieux isoler les responsabilités et de faciliter la maintenance et la mise à jour de l'application.
+
+MVP (Modèle-Vue-Présentateur) est une variante de l'architecture MVC qui se distingue par la division des responsabilités : 
+- le Modèle gère les données, 
+- la Vue gère l'affichage de l'interface utilisateur et 
+- le Présentateur gère l'affichage de l'interface utilisateur et le Modèle. <br>
+Cela permet de mieux isoler les responsabilités et de faciliter la maintenance et la mise à jour de l'application.
+
+Il n'y a pas un modèle meilleur qu'un autre, mais on choisit celui qui nous convient le mieux et ce en amont de tout.
+On doit apporter un oeil attentif au choix de l'architecture qui correspond le mieux aux besoins du projet.
+
 66.	Qu’est-ce qu’une API ? Définir l’architecture REST
 
-Une API vient de l'acronyme Application Programming Interface et permet à une application de récupérer des données d'un service tiers.
-Par exemple : une API web peut être utilisée pour interagir avec une base de données ou un service distant via des requêtes HTTP (GET, POST, etc.).
+Une API (Application Programming Interface) est une interface de programmation qui permet à une application de communiquer avec un service tiers, en échangeant des données, en exécutant des actions, ou en consommant des ressources. 
+Les API Web sont couramment utilisées pour interagir avec des services distants, comme des bases de données, des systèmes de gestion de contenu, ou des services de paiement, en envoyant des requêtes HTTP (GET, POST, PUT, DELETE, etc.).
 
 ## Modélisation - Base de données
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
@@ -489,20 +704,35 @@ h.	Concaténer 2 chaînes de caractères
 102.	Qu’est-ce que l’hameçonnage ?
 103.	Définir la « validation des entrées »
 
-
 ## RGPD
 104.	Qu’est-ce que le RGPD ?
       
 Le RGPD est l'acronyme de «Règlement Général de Protection des Données» en français. En anglais, cet acronyme sera écrit GDPR "General Data Protection Regulation".
 
 105.	Quel est son objectif principal ?
+
+Son objectif principal est de protéger les droits des personnes concernées par la collecte et le traitement de leurs données personnelles.
+Ce aussi bien dans un contexte privé que public.
+
 106.	Quelle est la date d’entrée en vigueur du RGPD ?
 
 Le RGPD est entré en vigueur le 24 mai 2016 et s'applique depuis le 25 mai 2018.
 
 107.	Quelles sont les sanctions possibles en cas de non-respect du RGPD ?
+
+Les sanctions en cas de non-respect du RGPD peuvent être lourdes et peuvent engendrer des poursuites judiciaires.
+Par exemple, le montant des sanctions pécuniaires peut s'élever jusqu'à 20 millions d'euros ou dans le cas d'une entreprise jusqu’à 4% du chiffre d'affaires annuel mondial.
+En 2023, 42 sanctions dont 36 amendes pour un montant cumulé de 89 179 500 euros.
+
 108.	En France, quel est l’autorité administrative qui s’occupe de faire appliquer le RGPD ?
+
+En France, il s'agit de la CNIL : acronyme de la Commission Nationale de l'Informatique et des Libertés.
+Elle est chargée de faire appliquer le RGPD auprès de toutes entreprises qui traitent des données personnelles.
+
 109.	Quel est le consentement valide selon le RPGD ?
+
+Le consentement d'un utilisateur doit être libre, spécifique, éclairé et univoque.
+
 110.	Qu’est-ce qu’une politique de confidentialité ?
 111.	Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
 112.	Quels sont les droits des utilisateurs selon le RGPD ?
@@ -524,8 +754,7 @@ De ce fait, en donnant une description dans une chaine de caractères à l'attri
 122.	Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
 123.	Quelle est la recommandation pour les URL d'un site web bien référencé ?
 124.	Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
-125.	Qu'est-ce que l'optimisation des images pour le référencement ?
-126.	Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+125.	Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
 
 ## Gestion de projets - DevOps
 127.	Qu’est-ce que la gestion de projet ?	
@@ -565,7 +794,7 @@ c.	GET and POST methods are interchangeable
 5)	What is the purpose of version control systems (e.g., Git) in web development ?
 a.	To track changes and manage collaborative development
 b.	To optimize website loading speed
-c.	To handle server-side scripting
+c.	To handle network protocols and data transfer
 6)	What is the purpose of a framework in web development ?
 a.	To provide a structured environment for building web applications
 b.	To handle network protocols and data transfer

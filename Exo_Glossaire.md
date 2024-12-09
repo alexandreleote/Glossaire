@@ -698,7 +698,22 @@ h.	Concaténer 2 chaînes de caractères
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
 97.	Définir l’attaque par force brute et l’attaque par dictionnaire
 98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
+
+Il existent plusieurs failles de sécurité, notamment :
+- Faille XSS (Cros-Site Scripting) 
+- Faille CSRF (Cross-Site Request Forgery)
+- Faille SQL Injection 
+- Les attaques par DdoS 
+- Les attaques par force brute : on force avec des algorithmes puissants les mots de passes des utilisateurs pour les deviner.
+- Les attaques par dictionnaire : se base sur un dictionnaire recessant les mots de passes les plus utilisés et leurs variantes.
+
+
 99.	A quoi servent l’authentification et l’autorisation dans un contexte d’application web ?
+
+L’authentification est la procédure qui permet de vérifier l’identité d’un utilisateur en s’assurant qu’il est bien qui il prétend être (par exemple en comparant un mot de passe à une entrée utilisateur).<br>
+L’autorisation est la procédure qui permet de définir les accès autorisés pour un utilisateur une fois authentifié. Par exemple, un utilisateur peut avoir accès à certaines parties du site web mais pas d'autres.
+
+
 100.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
 101.	Qu’est-ce qu’une politique de mots de passe forts ?
 102.	Qu’est-ce que l’hameçonnage ?

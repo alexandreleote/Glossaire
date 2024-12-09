@@ -645,6 +645,13 @@ Les API Web sont couramment utilisées pour interagir avec des services distants
 
 ## Modélisation - Base de données
 67.	Qu’est-ce que la modélisation de données ? Définir la méthode Merise
+
+La modélisation de données consiste à prévoir le fonctionnement d'une application avec une base de données. <br>
+De plus, elle permet de prévoir les différentes caractéristiques importantes au projet et au bon fonctionnement de l'application.<br>
+
+La méthode Merise, ou Méthode d'Etude et de Réalisation Informatique par les Sous-Ensembles/des Systèmes d'Entreprise, est une méthode d'analyse, de conception et de gestion de projet. <br>
+Le principe est d'articuler la démarche autour de 3 axes : conceptuel, logique et physique.
+
 68.	Quelles sont les 3 étapes principales de la méthode Merise ? 
 a.	Analyse, conception et réalisation
 b.	Planification, exécution et contrôle
@@ -653,9 +660,22 @@ c.	Création, modification et suppression
 70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
 71.	Donner la définition des mots suivants :
 a.	Entité
+
+Une entité est un groupe de données qui est lié ensemble par des relations.
+
 b.	Relation
+
+Une relation est une liaison entre deux ou plusieurs entités.
+
 c.	Cardinalité
+
+Une cardinalité traduit une règle de gestion qui peut être One to One, One to Many, Many to One ou Many to Many.
+
 d.	Clé primaire / clé étrangère
+
+Une clé primaire permet d'identifier de façon unique chaque enregistrement d'une table. <br>
+Une clé étrangère relie deux tables entre elles. C'est un point de référence qui garantit la cohérence et l'intégrité des données.
+
 72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
 73.	Qu’est-ce qu’une base de données ?
 74.	Définir les notions suivantes : 

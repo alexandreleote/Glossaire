@@ -309,17 +309,17 @@ Ainsi, on rend notre code non bloquant dans son usage en évitant de bloquer not
 23.	Qu’est-ce qu’un sélecteur CSS ?
 
 Un sélecteur CSS est un élément qui cible une balise HTML pour en modifier les propriétés. On peut cibler une balise <body> qui altèrera le corps du site.
-Si l'on attribue à cette balise un ID ou une CLASS, alors on peut modifier certains aspects de façon individuelles ou multiples.
+Si l'on attribue à cette balise un ID ou une CLASS, alors on peut modifier certains aspects de forme individuelles ou multiples.
 
 24.	Quelle balise HTML permet de créer un lien hypertexte ?
 
-La balise <a> avec l'attribut href permet de créer un lien hypertexte. Par exemple un lien pour revenir à la page index : *a href="index.html"* entre <> pour qu'elle soit effective.
+La balise `<a>` avec l'attribut href permet de créer un lien hypertexte. Par exemple un lien pour revenir à la page index : `<a href="index.html">Accueil</a>`.
 
 25.	Qu’est-ce qu’une requête AJAX ?
 
 L'AJAX est une technique de développement web permettant d'actualiser une partie d'une page sans devoir en recharger tout le contenu.
 Acronyme d'Asynchronous Javascript And Xml : l'AJAX est apparu en 1998 mais dont l'usage a été démocratisé que bien plus tard grâce en partie à la bibliothèque open source jQuery ayant intégré cette fonctionnalité.
-Ainsi on peut soumettre des formaulaires sans recharger la page, afficher des propositions dans un champ de recherche lorsqu'on tape les premiers caractères, effectuer une requête en base de données pour mettre à jour un bloc d'une page, consommer une API externe de façon asynchrone au chargement de la page sur une action utilisateur.
+Ainsi on peut soumettre des formaulaires sans recharger la page, afficher des propositions dans un champ de recherche lorsqu'on tape les premiers caractères, effectuer une requête en base de données pour mettre à jour un bloc d'une page, consommer une API externe de forme asynchrone au chargement de la page sur une action utilisateur.
 
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
 
@@ -349,13 +349,13 @@ Une fonction anonyme en JavaScript est une fonction qui est définie sans nom et
 Elle est souvent utilisée comme une fonction de rappel ou comme une fonction qui est passée en tant qu'argument à une autre fonction.
 
 Exemple :
-
+```javascript
 const sayHello = function() {
     console.log('Bonjour');
 };
 
 sayHello();
-
+```
 
 30.	Quelle méthode JavaScript est utilisée pour ajouter un élément à la fin d'un tableau ?
 
@@ -516,8 +516,9 @@ Les méthodes abstraites sont des méthodes qui ne sont pas définies mais qui d
 Le chaînage de méthodes consiste à agir sur plusieurs classes d'un objet en une instruction.
 
 Exemple :
-
-<code>$objet->methode1()->methode2()</code>
+```php
+$objet->methode1()->methode2();
+```
 
 56.	Qu’est-ce que la méthode __toString() ? Existe-t-il d’autres méthodes « magiques »
 
@@ -626,14 +627,12 @@ Il existe plusieurs variantes qui sont nées de l'architecture MVC, notamment le
 MVVM (Modèle-Vue-VueModèle) est une variante de l'architecture MVC qui se distingue par la division des responsabilités : 
 - le Modèle gère les données, 
 - la Vue gère l'affichage de l'interface utilisateur et 
-- la VueModèle gère l'affichage de l'interface utilisateur et le Modèle. <br>
-Cela permet de mieux isoler les responsabilités et de faciliter la maintenance et la mise à jour de l'application.
+- la VueModèle est un pont entre le Modèle et la Vue fournissant une interface que la vue peut utiliser pour accéder aux données du modèle de manière appropriée. <br>
 
 MVP (Modèle-Vue-Présentateur) est une variante de l'architecture MVC qui se distingue par la division des responsabilités : 
 - le Modèle gère les données, 
 - la Vue gère l'affichage de l'interface utilisateur et 
-- le Présentateur gère l'affichage de l'interface utilisateur et le Modèle. <br>
-Cela permet de mieux isoler les responsabilités et de faciliter la maintenance et la mise à jour de l'application.
+- le Présentateur lie la Vue au Modèle de sorte à organiser et formater les données récupérées du Modèle. Cette couche regroupe les traitements concernant les actions de l'utilisateur, la couche Présentateur n'a pas accès à la Vue. <br>
 
 Il n'y a pas un modèle meilleur qu'un autre, mais on choisit celui qui nous convient le mieux et ce en amont de tout.
 On doit apporter un oeil attentif au choix de l'architecture qui correspond le mieux aux besoins du projet.
@@ -654,10 +653,45 @@ Le principe est d'articuler la démarche autour de 3 axes : conceptuel, logique 
 
 68.	Quelles sont les 3 étapes principales de la méthode Merise ? 
 a.	Analyse, conception et réalisation
+
+La phase initiale consiste à étudier et comprendre les bsoins du système : Analyse. <br>
+On identifie les processus, les flux d'informations et l'objectif est de produire une vision claire des besoins. <br>
+
+La phase de modélisation consiste à concevoir l'architecture du système : Conception. <br>
+On crée des modèles conceptuels et logiques (MCD / MLD) afin d'organiser et structurer les données et traitements. <br>
+
+La phase de développement consiste en une mise en oeuvre concrète du système : Réalisation. <br>
+On transforme les modèles en solutions opérationnelles, développe les applications, bases de données et interfaces. <br>
+S'ensuit alors une phase de tests et validaution du système.
+
 b.	Planification, exécution et contrôle
+
+On utilisera ces termes dans le cadre de la gestion de projet. <br>
+Ils permettent de suivre, contrôler et vérifier le bon fonctionnement de l'application durant son développement. <br>
+Il s'agit d'un point important quant aux livrables à remettre aux clients.
+
 c.	Création, modification et suppression
+
+Il s'agit de termes trop génériques ne décrivant pas spécifiquement les étapes propres à la méthode Merise.
+
 69.	Qu’est-ce qu’un modèle conceptuel de données (MCD) en Merise ?
+
+Un MCD (modèle conceptuel de données) sert à définir en une représentation abstraite et graphique la structure des données d'un système d'information : les entités, les relations et les attributs. <br>
+
+Le MCD a pour caractéritiques d'être indépendant des considérations techniques, compréhensible par les utilisateurs et concepteurs en usant des termes simples et concrets.
+
+Il se compose d'entités, d'associations et d'attributs afin de pouvoir modéliser le fonctionnement d'une application ou d'un système d'information.
+
 70.	Qu’est-ce qu’un modèle logique de données (MLD) en Merise ?
+
+Le MLD (modèle logique de données) permet de traduire techniquement le MCD. <br>
+Il est adapté à un système de gestion de base de données en montrant les relations entre les entités par l'intégration de clé primaire et clé étrangère. <br>
+Il représente les donnée ssous forme de tables et intègre les contraintes techniques.
+
+On pourrait dire qu'il s'agit d'une conversion du MCD des entités directement en tables que l'on pourrait utiliser dans une base de données.
+L'objectif est de préparer la création physique de la base de données en la structurant de manière opérationnelle afin d'en faciliter l'implémentation.
+
+
 71.	Donner la définition des mots suivants :
 a.	Entité
 

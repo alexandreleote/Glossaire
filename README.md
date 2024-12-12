@@ -23,5 +23,5 @@ Documentation officielle :
 
 ___
 Glossaire tenu dans le cadre de la formation [Développeur Web et Web Mobile](https://elan-formation.fr/formation/19754)
-📅 Date : 28/11/2024 - 10/12/2024
+📅 Date : 23/09/2024 - en cours
 ✍️ Auteur : [Alexandre Leote](https://github.com/alexandreleote)

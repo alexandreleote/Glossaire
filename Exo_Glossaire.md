@@ -711,11 +711,31 @@ Une clé primaire permet d'identifier de façon unique chaque enregistrement d'u
 Une clé étrangère relie deux tables entre elles. C'est un point de référence qui garantit la cohérence et l'intégrité des données.
 
 72.	Que devient une relation de type « Many To Many » dans le modèle logique de données ?
+
+Dans le modèle logique une relation de type « Many to Many » devient une table composées des attributs des entités impliquées.
+
 73.	Qu’est-ce qu’une base de données ?
+
+Une base de données est un ensemble de tables regroupant des informations qui y sont stockées. Au moyen d'un logiciel et de requêtes, un utilisateur peut accéder aux différentes informations sauvegardées.
+
 74.	Définir les notions suivantes : 
 a.	SQL
+
+SQL, ou Structured Query Language, est un langage de programmation permettant de stocker et traiter des informations stockées en base de données.
+
 b.	MySQL
+
+Il s'agit d'un système permettant d'administrer et gérer des données au moyen de requêtes SQL?
+
 c.	SGBD (donner 2 exemples de SGBD)
+
+L'acronyme SGBD vient de Système de Gestion de Base de Données. Vulgairement raccourci à « base de données », cela est plus complet que ne laisse transparaître le nom. Il s'agit en fait d'un logiciel définissant le modèle d'un système de base de données.
+Ainsi on structure la base de données de sorte à faciliter les lectures et écritures en fonction des accès.
+
+Exemples de SGBD : 
+- MongoDB orienté documents (NoSQL)
+- Firebird relationnel (SQL)
+
 75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
 76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
 77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?

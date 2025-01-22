@@ -756,15 +756,57 @@ h.	Concaténer 2 chaînes de caractères
 
 ## Symfony
 84.	Qu’est-ce que Symfony ?
+
+Symfony est un framework en PHP qui permet de créer des applications web robustes et scalables.
+
 85.	Sur quel langage de programmation et design pattern repose Symfony ? 
+
+Il repose sur le langage de programmation PHP et le design pattern MVC : (Modèle-Vue-Contrôleur).
+
 86.	Quelle est la dernière version en date de Symfony ?
+
+La dernière version en date stable de Symfony est la : 7.2.2 sortie en Novembre 2024.
+
 87.	Qu’est-ce qu’un bundle ? 
+
+Il s'agit d'un répertoire contenant tou ce qui peut être nécessaire pour une fonctionnalité tel que les classes PHP, des templates et des fichiers de configuration. Cela permet de créer des modules au sein des applications et de réutiliser ces modules au sein de différents projets.
+
 88.	Quel est le moteur de template utilisé par défaut dans Symfony ?
+
+Le moteur de template utilisé par Symfony est Twig.
+
 89.	Qu’est-ce qu’un ORM ? Quel est son utilité et comment s’appelle-t-il au sein de Symfony ?
-90.	Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ?
+
+Un ORM (Object Relational Mapping) est une manière de gérer les interactions entre les données d'une base de données relationnelle et les objets utilisés par une application. 
+
+On peut alors lier des objets en POO à des tables de bases de données, simplifiant ainsi la gestion des données.
+
+Pour Symfony, l'ORM utilisé s'appelle Doctrine.
+
+90.	Qu’est-ce que l’injection de dépendances ? Quel est l’outil utilisé dans ce contexte et quel fichier contient l’intégralité des dépendances du projet ? 
+
+L'injection de dépendances est une pratique permettant à une classe d'utiliser des services ou obkets via un mécanisme externe.
+Au lieu d'instancier directement les éléments nécessaires, les dépendancers permettant une modularité et faciliter les tests.
+Ces dépendances sont gérées via l'outil Composer et listées dans le fichier `*composer.json*`.
+
 91.	Que permet le bundle Maker au sein de Symfony ? 
+
+Le bundle Maker permet de créder rapidmeent des entités, des contrôleurs, des formulaires, des commandes, des fonctionnalités diverses et variées dont on aurait besoin dans notre projet.
+Pour ce faire, on emploie des commandes telles que `make:entity` ou `make:controller`. 
+
 92.	Quel est le langage de requêtage exploité au sein d’un projet Symfony ?
+
+Le langage de requêtage exploité au sein de Symfony est le DQL => __*Doctrine Query Language*__.
+Il s'agit d'un langange orienté objet fourni avec Doctrine. Il ressemble au SQL mais abstrait les détails de la base de données.
+
 93.	Quel est le composant qui garantit l’authentification et l’autorisation des utilisateurs ?
+
+Le composant Security garantit l'authentification et l'autorisation des utilisateurs.
+Il y arrive en vérifiant l'identité d'un utilisateur via des méthodes telles que le login/password ou OAuth par exemple.
+Puis, il autorise les utilisateur grâce aux permissions en fonction des rôles : `ROLE_USER` ou `ROLE_ADMIN`.
+
+On retrouve dans le fichier `config/packages/security.yaml` les configurations de firewalls pour l'authentification ;
+Et pour l'autorisation, via des règles d'accès et annotation tel que @IsGranted.
 
 ## Sécurité
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?

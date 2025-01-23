@@ -810,9 +810,26 @@ Et pour l'autorisation, via des règles d'accès et annotation tel que @IsGrante
 
 ## Sécurité
 94.	Qu’est-ce que l’injection SQL ? Comment s’en prémunir ?
+
+Il s'agit d'attaques contre les bases de données relationnelles (SQLi) et non relationnelles (injections NoSQL).
+Un utilisateur communique depuis l'application web une entrée modifiant la requête SQL à la base de données.
+Pour s'en prémunir, il faut utiliser des requêtes préparées et l'échapement des caractères spéciaux.
+
 95.	Qu’est-ce que la faille XSS ? Comment s’en prémunir ?
+
+La faille XSS (Cross-Site Scripting) permet aux attaquants d'injecter des scripts malveillants dans des pages web pour voler des données ou compromettre des sessions utilisateurs.<br> 
+Pour s'en prémunir : encoder les sorties, valider et filtrer les entrées, utiliser des Content Security Policy (CSP), et échapper les caractères spéciaux.
+
 96.	Qu’est-ce que la faille CSRF ? Comment s’en prémunir ?
+
+La faille CSRF (Cross-Site Request Forgery) permet à un attaquant de faire exécuter des actions non désirées à un utilisateur connecté sur un site web. <br>
+Pour s'en prémunir, il faut générer et vérifier des jetons uniques (tokens) pour chaque requête, utiliser des en-têtes HTTP personnalisées, et implémenter la politique SameSite pour les cookies.
+
 97.	Définir l’attaque par force brute et l’attaque par dictionnaire
+
+Attaque par force brute : méthode systématique testant exhaustivement toutes les combinaisons possibles de mots de passe/clés jusqu'à trouver la bonne. <br>
+Attaque par dictionnaire : approche utilisant une liste prédéfinie de mots de passe probables (mots courants, noms, dates) pour tenter de craquer une authentification.
+
 98.	Existe-t-il d’autres failles de sécurité ? Citer celles-ci et expliquer simplement leur comportement
 
 Il existent plusieurs failles de sécurité, notamment :

@@ -778,7 +778,7 @@ Symfony est un framework en PHP qui permet de créer des applications web robust
 
 85.	Sur quel langage de programmation et design pattern repose Symfony ? 
 
-Il repose sur le langage de programmation PHP et le design pattern MVC : (Modèle-Vue-Contrôleur).
+Il repose sur le langage de programmation PHP et le design pattern MVP : (Modèle-Vue-Présenteur).
 
 86.	Quelle est la dernière version en date de Symfony ?
 

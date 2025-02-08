@@ -319,7 +319,7 @@ La balise `<a>` avec l'attribut href permet de créer un lien hypertexte. Par ex
 
 L'AJAX est une technique de développement web permettant d'actualiser une partie d'une page sans devoir en recharger tout le contenu.
 Acronyme d'Asynchronous Javascript And Xml : l'AJAX est apparu en 1998 mais dont l'usage a été démocratisé que bien plus tard grâce en partie à la bibliothèque open source jQuery ayant intégré cette fonctionnalité.
-Ainsi on peut soumettre des formaulaires sans recharger la page, afficher des propositions dans un champ de recherche lorsqu'on tape les premiers caractères, effectuer une requête en base de données pour mettre à jour un bloc d'une page, consommer une API externe de forme asynchrone au chargement de la page sur une action utilisateur.
+Ainsi on peut soumettre des formulaires sans recharger la page, afficher des propositions dans un champ de recherche lorsqu'on tape les premiers caractères, effectuer une requête en base de données pour mettre à jour un bloc d'une page, consommer une API externe de forme asynchrone au chargement de la page sur une action utilisateur.
 
 26.	Quel sélecteur CSS permet de sélectionner tous les éléments d’une classe spécifique ? D’un identifiant spécifique ?
 
@@ -438,7 +438,6 @@ Ainsi on rexpecte la cohérence visuelle, la lisibilité dans la navigation, l'e
 41.	Qu’est-ce que la notion d’affordance en UX Design ?
 
 L'affordance en UX Design est le principe dans lequel l'utilisateur évolue de manière intuitive sur une page web. Cette manière est dictée subtilement par les éléments auxquels l'utilisateur fait face : les boutons, les images, les liens...<br>
-Dans le développement d'une site web, nous allons respecter certaines règles de bienséance du développement afin de ne pas perturber l'utilisateur dans sa découverte et lui permettre de naviguer sur le site la première fois comme s'il l'avait déjà fait auparavant.<br>
 Le tout est de fluidifier son expérience de sorte à ce qu'il revienne ou reste sur le site un maximum de temps et de fois.
 
 42.	Qu’est-ce qu’un « mobile first design » ?
@@ -495,7 +494,14 @@ L'encapsulation consiste à regrouper des données et des comportements au sein 
 Cela permet de protéger les données contre l'extérieur, en définissant les niveaux d'accès suivant des mots-clés <code>public</code>, <code>private</code> et <code>protected</code>.<br>
 
 50.	Que signifie « étendre une classe » ? Quelle est le concept clé mis en œuvre ? Donner un exemple
+
+Ici on parle d'héritage d'une classe, c'est-à-dire que l'on étend les attributs et méthodes d'une classe à une autre qui en bénéficie. <br>
+Ainsi on crée une hiérarchie des classes et réutilise du code existant. En partant d'une classe générale, on peut créer des classes spécifiques qui héritent de la même base.
+
 51.	Définir l’opérateur de résolution de portée
+
+Il est essentiel dans le principe d'héritage d'une classe, l'utilisation des membres statiques et constantes d'une classe parente ou de sa propre classe.
+
 52.	Définir une méthode / propriété statique
 
 Une méthode statique est une méthode qui est liée à une classe et non à un objet.<br>
@@ -504,6 +510,10 @@ Les propriétés statiques sont quant à elles des propriétés liées à une cl
 Les propriétés statiques sont en lecture seule, c'est-à-dire qu'elles ne peuvent pas être modifiées une fois la classe instanciée.
 
 53.	Définir le polymorphisme en POO
+
+Cela permet à différentes classes d'implémenter les mêmes méthodes de manières différentes (définies par une interface ou une classe parente).<br>
+En pratique, cela signifie qu'un même nom de méthode peut avoir différents comportements selon la classe qui l'implémente, permettant ainsi de traiter de manière uniforme des objets de types différents.
+
 54.	Définir une méthode / classe abstraite ?
 
 Une méthode ou classe abstraite consiste à déclarer une classe ou une méthode sans la définir. <br>
@@ -737,7 +747,14 @@ Exemples de SGBD :
 - Firebird relationnel (SQL)
 
 75.	Dans une base de données, les données sont stockées dans des ___. Celles-ci sont constituées de lignes appelées ___ et de colonnes appelées ___
+
+Dans une base de données, les données sont stockées dans des __tables__. Celles-ci sont constituées de lignes appelées __enregistrements__ et de colonnes appelées __champs__.
+
 76.	Quelle est la différence entre une base de données relationnelle et non relationnelle ?
+
+Les bases de données relationnelles stockent des données selon un schéma strict avec des relations entre les différentes tables qui les composent. On garantit alors la cohérence de la base de données grâce aux propriétés ACID.<br>
+Les bases de données non relationnelles stockent des données de manière flexible assurant une meilleure scalabilité des éléments enregistrés. On peut alors stocker différents documents, clé-valeur ou graphes.
+
 77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
 78.	A quoi sert une vue dans une base de données ?
 79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?

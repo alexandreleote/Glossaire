@@ -560,7 +560,9 @@ Cela permet de ne pas avoir à inclure des fichiers et des classes manuellement.
 On appelle en français les accesseurs pour les "getters" et les mutateurs pour les "setters".<br>
 Le but pour les accesseurs est de récupérer les informations et pour les mutateurs de les modifier selon l'instruction programmée.
 
-59.	Qu’est-ce que la sérialisation en PHP ? 
+59.	Qu’est-ce que la sérialisation en PHP ?
+
+Il s'agit d'une méthode de conversion des données (sous forme de tableau, d'objets ou autre) en une chaîne de caractères pour ensuite les manipuler plus aisément.
 
 ## Architecture 
 60.	Qu’est-ce que l’architecture client / serveur ? Grâce à quel type de requête peut-on interroger le serveur. Définir l’acronyme de ce type de requête. Si on ajoute un « S » à cet acronyme, expliquer la différence
@@ -756,20 +758,78 @@ Les bases de données relationnelles stockent des données selon un schéma stri
 Les bases de données non relationnelles stockent des données de manière flexible assurant une meilleure scalabilité des éléments enregistrés. On peut alors stocker différents documents, clé-valeur ou graphes.
 
 77.	Qu’est-ce qu’une jointure dans une base de données ? En existe-t-il plusieurs ? Si oui lesquelles ?
+
+Une jointure est une association entre deux tables au minimum afin de recouper des données ayant un intérêt. Il en existe quatre essentiellement :
+ - INNER JOIN : Elle permet de récupérer les données recoupées des deux tables. On garde que ce qui est commun à la table A et B.
+ - LEFT JOIN : Elle permet de récupérer l'ensemble des données de la table A et les données recoupées de la table B (qui sont les mêmes que la table A).
+ - RIGHT JOIN : Elle permet de récupérer l'ensemble des données de la table B et les données recoupées de la table A (qui sont identiques à la table B).
+ - FULL JOIN : Elle permet de récupérer la totalité des deux tables (ou plus) ciblées sans devoir définir de spécificités.
+
 78.	A quoi sert une vue dans une base de données ?
+
+![image](https://github.com/user-attachments/assets/feb4898d-609e-4f74-b12a-bedfdfcd1636)
+Une vue permet de simplifier l'accès aux données, de sorte que l'on sauvegarde une requête complexe afin d'en extraire les éléments souhaités.
+
 79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?
+
+Il s'agit de la cohérence entre les différentes tables liées par des clés étrangères dans une base de données dite relationnelle.
+
 80.	Quelles sont les fonctions d’agrégation en SQL ?
+
+Les fonctions d'agrégation permettent d'effectuer des opérations statistiques sur un ensemble d'enregistrement.
+ - AVG() permet de calcluer la moyenne
+ - COUNT() permet de compter le nombre d'enregistrement sur une colonne ou une table
+ - MAX() renvoie la valeur maximale d'une colonne ou d'un ensemble de lignes (numérique et alphanumérique)
+ - MIN() renvoie la valeur minimale d'une colonne ou d'un ensemble de lignes (numérique et alphanumérique)
+ - SUM() permet de caluler la somme d'un ensemble d'enregistrement
+ 
 81.	Qu’est-ce qu’un CRUD dans le contexte d’une base de données ?
+
+CRUD est l'acronyme pour CREATE, READ, UPDATE & DELETE. 
+Il s'agit des opérations principales d'une base de données pour la créer, la lire, la mettre à jour et supprimer des enregistrements de celle-ci.
+On retrouve les fonctions suivantes pour réaliser ces actions :
+ - INSERT INTO table pour créer
+ - SELECT * FROM table pour lire les enregistrements d'une table
+ - UPDATE table SET email = "example@test.fr" WHERE user_id = 1
+ - DELETE FROM table WHERE user_id = 1
+
 82.	Quelles sont les clauses qui permettent de :
 a.	Insérer un nouvel enregistrement dans une table
+
+INSERT INTO table (value1, value2) VALUES (valueA, valueB); On insère dans la table dans les champs value1 et value2, les valeurs définies valueA et valueB respectivement.
+
 b.	Modifier un enregistrement dans une table
+
+INSERT INTO table SET email ="example@test.fr" WHERE user_id = 1; On modifie dans la table l'email de l'utilisateur ayant pour ID le numéro 1.
+
 c.	Supprimer un enregistrement dans une table
+
+DELETE FROM table WHERE user_id = 1; On supprime l'enregistrement dans la table concernant l'utilisateur ayant pour ID le numéro 1.
+
 d.	Supprimer la base de données
+
+DROP DATABASE my_db; Nous sélectionnons la base de données ayant pour nom my_db afin de la supprimer dans son intégralité.
+
 e.	Filtrer les résultats d’une requête SQL
+
+SELECT * FROM user WHERE age > 30; On sélectionne les utilisateurs dont l'âge est supérieur à 30 ans.
+
 f.	Trier les résultats d’une requête SELECT
+
+SELECT * FROM user ORDER BY name ASC; On sélectionne les utilisateurs et les trie par ordre alphabétique ascendant, en partant de A jusqu'à Z.
+
 g.	Regrouper les résultats d'une requête SELECT en fonction d'une colonne spécifique
+
+SELECT is_verified, COUNT(*) FROM user GROUP BY is_verified; On sélectionne les utilisateurs de la table user et on compte le nombre d'utilisateurs vérifiés et non vérifiés, en les regroupant par catégorie (is_verified).
+
 h.	Concaténer 2 chaînes de caractères 
+
+SELECT CONCAT(u.first_name, ' ', u.name) AS identity FROM user u
+
 83.	Comment se connecter à une base de données en PHP ? Quelle est la classe native utilisée ?
+
+Pour se connecter à une base de données en PHP, on utilise la classe native PDO (PHP Data Objects).
+Cela permet de créer une interface pour accéder à la base de données afin de paramétrer des requêtes préparées.
 
 ## Symfony
 84.	Qu’est-ce que Symfony ?
@@ -865,9 +925,20 @@ L’autorisation est la procédure qui permet de définir les accès autorisés 
 
 
 100.	Définir la notion de hachage d’un mot de passe et citer des algorithmes de hachage
+
+Le hachage génère une valeur unique et déterministe à partir de données d'entrée, rendant difficile la récupération de l'entrée d'origine. Les algorithmes Bcrypt et Argon2I sont dits "forts" car ils ajoutent du salage et un facteur de coût pour ralentir les attaques par force brute. Cela rend le processus de hachage plus sécurisé et résistant aux attaques de type dictionnaire ou force brute.
+
 101.	Qu’est-ce qu’une politique de mots de passe forts ?
+
+Une politique de mots de passe forts impose des critères pour garantir la sécurité des mots de passe, tels que la longueur minimale, la diversité des caractères (majuscules, minuscules, chiffres, symboles) et l'interdiction de mots de passe simples. 
+
 102.	Qu’est-ce que l’hameçonnage ?
+
+Le hameçonnage (phishing) est une technique utilisée par des cybercriminels pour voler des informations personnelles en envoyant des messages qui semblent légitimes. Ils peuvent se faire passer pour des entreprises ou créer un sentiment d'urgence pour inciter l'utilisateur à divulguer des informations sensibles. L'utilisateur, en suivant un lien vers une fausse page web, expose alors ses données (email, mot de passe, identité, etc.), que l'attaquant peut exploiter.
+
 103.	Définir la « validation des entrées »
+
+La validation des entrées consiste à filtrer les données saisies par un utilisateur dans un formulaire (inscription, contact, etc.) pour vérifier qu'elles respectent un format attendu. Cela permet de s'assurer que les données sont valides, sécurisées et exemptes d'erreurs ou de tentatives d'injection malveillante.
 
 ## RGPD
 104.	Qu’est-ce que le RGPD ?
@@ -899,9 +970,20 @@ Elle est chargée de faire appliquer le RGPD auprès de toutes entreprises qui t
 Le consentement d'un utilisateur doit être libre, spécifique, éclairé et univoque.
 
 110.	Qu’est-ce qu’une politique de confidentialité ?
+
+Une politique de confidentialité est un document légal expliquant comment une organisation collecte, utilise, stocke et protège les données personnelles des utilisateurs. Elle doit informer les utilisateurs de leurs droits et des pratiques de traitement des données, en conformité avec les lois sur la protection de la vie privée (comme le RGPD).
+
 111.	Quelle est la durée de conservation maximale des données personnelles selon le RGPD ?
+
+Le RGPD ne définit pas de durée de conservation maximale pour les données personnelles. Cependant, la durée de conservation doit être justifiée par le cycle de vie de la donnée et son objectif spécifique.
+
 112.	Quels sont les droits des utilisateurs selon le RGPD ?
+
+Les utilisateurs doivent avoir la possibilité d'accéder à leurs données personnelles, de connaître leur utilisation, de les modifier ou même de les supprimer, et ce, à tout moment.
+
 113.	Qu’est-ce que le principe de minimisation des données selon le RGPD ?
+
+Il s'agit de ne collecter que les données nécessaires au bon fonctionnement de l'application ou du service. Ce principe vise à limiter la collecte de données et à protéger la vie privée des individus.
 
 ## SEO
 114.	Qu’est-ce que le SEO ? 

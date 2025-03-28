@@ -768,6 +768,7 @@ Une jointure est une association entre deux tables au minimum afin de recouper d
 78.	A quoi sert une vue dans une base de données ?
 
 ![image](https://github.com/user-attachments/assets/feb4898d-609e-4f74-b12a-bedfdfcd1636)
+
 Une vue permet de simplifier l'accès aux données, de sorte que l'on sauvegarde une requête complexe afin d'en extraire les éléments souhaités.
 
 79.	Qu’est-ce que l’intégrité référentielle dans une base de données ?

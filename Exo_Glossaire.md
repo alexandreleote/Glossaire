@@ -988,21 +988,54 @@ Il s'agit de ne collecter que les données nécessaires au bon fonctionnement de
 
 ## SEO
 114.	Qu’est-ce que le SEO ? 
+
+Le SEO (Search Engine Optimization), ou référencement naturel, consiste à optimiser son site web, notamment les mots-clés, la structure et l’aspect technique, pour améliorer sa visibilité et son classement sur les moteurs de recherche.
+
 115.	Quel est l’objectif principal du SEO ?
+
+L'objectif principal du SEO est d'améliorer la visibilité d'un site internet en suivant les critères établis par Google (leader des moteurs de recherche), afin d'assurer que le site soit bien indexé et facilement accessible pour les utilisateurs, tout en offrant une expérience de qualité.
+
 116.	Existe-t-il plusieurs types de référencement ? Lesquels ?
+
+Il existe plusieurs types de référencement : le SEO (référencement naturel, le SEA (référencement payant), le référencement international et le référencement local.
+
 117.	Qu’est-ce que la densité de mots-clés en SEO ?
+
+La densité de mots-clés désigne l'utilisation optimale d'un mot-clé dans une page pour en améliorer le référencement. Il est important de ne pas abuser de ce mot-clé afin d'éviter le 'keyword stuffing', qui peut pénaliser le site. Idéalement, la densité de mots-clés doit être comprise entre 1 % et 3 % du texte total sur la page.
+
 118.	Qu’est-ce qu’un attribut « alt » ?
 
-Un attribut « alt » en HTML permet de donner une description textuelle à une image. Le terme désiné texte alternatif, alternatif dans le cas où l'utilisateur ne pourrait pas accéder à l'image visuellement ou serait dans l'incapacité de voir l'image.
+Un attribut « alt » en HTML permet de donner une description textuelle à une image. Le terme désigné texte alternatif, alternatif dans le cas où l'utilisateur ne pourrait pas accéder à l'image visuellement ou serait dans l'incapacité de voir l'image.
 De ce fait, en donnant une description dans une chaine de caractères à l'attribut alt d'une image, on rend possible la retranscripption vocale du texte permettant à l'utilisateur de comprendre l'élément que l'on a intégré dans notre site internet.
 
 119.	Qu’est-ce que la balise « meta description » ?
+
+La balise "meta description" est un élément HTML ajoutant des informations essentielles au sujet d'une page web et ainsi permettre son bon référencement. Comme son nom l'indique, elle décrit brièvement le contenu de la page dont le lien est affiché dans le résultat de la recherche du moteur utilisé.
+
 120.	Qu’est-ce que le « nofollow » en SEO ?
+
+Le "nofollow" est un attribut HTML utilisé pour les liens publicitaires, les commentaires ou les contenus douteux afin d'éviter d'influencer le classement des pages liées.
+
 121.	Quelle est l'importance du contenu de qualité pour le référencement d'un site web ?
+
+Un contenu de qualité engage les utilisateurs en leur fournissant des informations pertinentes et utiles en réponse à leurs recherches. À l'inverse, un contenu de faible qualité ne sera pas bien indexé par les moteurs de recherche et risque de ne pas être mis en avant, ce qui nuit à la visibilité du site.
+
 122.	Pourquoi est-il important d'utiliser des balises de titre (h1, h2, h3, etc.) de manière structurée ?
+
+La sémantique en HTML permet d’attribuer un sens clair aux éléments d'une page, tant pour les moteurs de recherche que pour les utilisateurs. Une hiérarchie bien structurée facilite la compréhension et la lecture des informations, améliorant ainsi l'accessibilité et le référencement du site.
+
 123.	Quelle est la recommandation pour les URL d'un site web bien référencé ?
+
+Il est important de créer des URL courtes, concises et précises afin de ne pas perdre le lecteur et de maintenir sa confiance. Permettre à l'utilisateur de comprendre facilement où il se trouve dans le chemin URL améliore non seulement la visibilité du site, mais renforce également la confiance des visiteurs.
+
 124.	Qu'est-ce que le maillage interne et pourquoi est-il important pour le référencement ?
+
+Le maillage interne consiste à créer des liens entre les pages d'un même site, permettant de diriger les utilisateurs vers des pages plus profondes qui ne sont pas visibles dans les résultats de recherche initiaux. Cela favorise la sérendipité, augmentant ainsi le taux de clics et de conversion, tout en respectant la règle des trois clics, qui suggère qu'un utilisateur ne devrait pas avoir à cliquer plus de trois fois pour accéder à l'information qu'il recherche.
+
 125.	Qu'est-ce qu'un plan de site (sitemap) et pourquoi est-il important pour le référencement ?
+
+Un sitemap est un fichier au format XML qui permet aux moteurs de recherche de parcourir rapidement l'ensemble des pages d'un site web. Cela facilite l'indexation des pages et en fait un levier important pour améliorer le référencement du site.
+
 
 ## Gestion de projets - DevOps
 127.	Qu’est-ce que la gestion de projet ?	
@@ -1025,33 +1058,64 @@ De ce fait, en donnant une description dans une chaine de caractères à l'attri
 ## English
 1)	What does JavaScript enable you to do on a website ?
 a.	Add interactive behavior and dynamic content
+
+JavaScript gives developers the ability to create dynamic pages and content, such as forms, animations, and updates, without needing to reload the page.
+
 b.	Define the layout and design of web pages
 c.	Handle server-side operations
+
 2)	Which programming language is primarily used for server-side web development ?
 a.	PHP
+
+PHP is primarily used for server-side web development, allowing developers to create dynamic and interactive websites by handling server-side logic, such as database interactions and user authentication.
+
 b.	JavaScript
 c.	HTML
-3)	What is the purpose of a web browser ?
+
+4)	What is the purpose of a web browser ?
 a.	To render and display web pages
+
+The browser renders and displays web pages thanks to HTML, CSS, and JavaScript. 
+It interprets the content from a website and presents it in a user-friendly format.
+
 b.	To execute serve-side code
 c.	To manage databases
-4)	What is the difference between GET and POST methods in HTTP ?
+
+5)	What is the difference between GET and POST methods in HTTP ?
 a.	GET retrieves data from a server, while POST submits data to a server
+
+GET and POST are two superglobal methods in PHP that behave differently. GET retrieves data from the server and appends it to the URL, while POST submits data to the server within the request body, making it more secure for transmitting sensitive information.
+
 b.	GET submits data to a server, while POST retrieves data from a server
 c.	GET and POST methods are interchangeable
-5)	What is the purpose of version control systems (e.g., Git) in web development ?
+
+6)	What is the purpose of version control systems (e.g., Git) in web development ?
 a.	To track changes and manage collaborative development
+
+The purpose of version control systems is to enable a development team to collaborate on the same project without interfering with each other's work. Each team member can create a fork of the main code to develop new features and then merge their changes back into the main codebase, allowing everyone to work at their own pace while minimizing the risk of conflicts or errors.
+
 b.	To optimize website loading speed
 c.	To handle network protocols and data transfer
-6)	What is the purpose of a framework in web development ?
+
+7)	What is the purpose of a framework in web development ?
 a.	To provide a structured environment for building web applications
+
+As its name suggests, a framework provides a structured foundation for the code, allowing developers to focus solely on building the necessary functionalities for the application, rather than dealing with the underlying infrastructure.
+
 b.	To handle network protocols and data transfer
 c.	To create visual designs and layouts for websites
-7)	What does NoSQL stand for ?
+
+8)	What does NoSQL stand for ?
 a.	Not Only SQL
+
+NoSQL stands for 'Not Only SQL,' meaning it doesn't solely rely on traditional SQL databases for operations like generating, updating, or deleting data. Instead, NoSQL databases offer flexible data models and allow for more scalable and dynamic ways of handling data.
+
 b.	Non-Structured Query Language
 c.	New Object-Oriented Language
-8)	Which of the following is a characteristic of NoSQL databases ?
+
+9)	Which of the following is a characteristic of NoSQL databases ?
 a.	Strict schema enforcement
 b.	Support for complex transactions
 c.	Scalability and flexible data models
+
+NoSQL databases offer more flexible data models, allowing for better scalability in their usage.

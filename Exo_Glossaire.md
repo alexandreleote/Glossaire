@@ -1039,22 +1039,75 @@ Un sitemap est un fichier au format XML qui permet aux moteurs de recherche de p
 
 ## Gestion de projets - DevOps
 127.	Qu’est-ce que la gestion de projet ?	
+
+Il s'agit de l'ensemble des techniques et méthodes visant à organiser, planifier et piloter les différentes étapes d'un projet pour atteindre ses objectifs dans les délais et budgets définis.
+
 128.	Qu’est-ce qu’une méthode Agile de gestion de projet ? 
+
+C'est une approche itérative et collaborative qui privilégie l'adaptation au changement, la livraison fréquente de fonctionnalités (livrables) et la communication avec le client à un rythme défini que l'on appelle sprints.
+
 129.	Expliquer la méthode MoSCoW en quelques lignes et citer ses avantages
+
+La méthode MoSCoW permet de hiérarchiser et prioriser les tâches selon 4 principes : 
+- Must (à faire impérativement et qui doit être présent dans le projet)
+- Should (important mais non vital)
+- Could (facultatif)
+- Won't (ne sera pas inclus, en dehors du périmètre)
+
 130.	A quoi sert la méthodologie MVP ? Citer les caractéristiques clés
+
+Le Minimum Viable Product consiste en un livrable défini devant respecter les fonctionnalités importantes attendues rendant ainsi le produit accessible et utilisable dans une version simplifiée afin de valider une idée auprès des utilisateurs.
+
 131.	Qu’est-ce que la planification itérative ?
+
+Il s'agit de sprints, des durées courtes et répétées définies en amont du projet, ceci permet d'ajuster régulièrement le projet selon les retours et les besoins.
+
 132.	Citer 3 méthodes Agiles dans le cadre d’un projet informatique
+
+Scrum, Kanban, Extreme Programming (XP)
+
 133.	Qu’est-ce qu’une réunion de revue de projet ?
+
+Cette réunion permet d'évaluer l'avancée du projet, d'inspecter les livrables et d'ajuster le plan si nécessaire. Elle implique les parties prenantes afin d'être pertinente.
+
 134.	Qu’est-ce qu’un livrable dans un projet ? 
+
+Un livrable est un produit, document ou service à fournir à un client à une étape du projet. Par ex : la mise en place d'une fonctionnalité, le déploiement de l'application dans une phase alpha.
+
 135.	Quels sont les 3 piliers SCRUM ? Définir chacun d’entre eux
+
+- Transparence : Tout le monde a une vision claire du travail et des objectifs.
+- Inspection : Évaluation régulière de l'avancement et des résultats.
+- Adaptation : Capacité à ajuster les processus en fonction des retours.
+
 136.	Qu’est-ce que le DevOps et quel est son objectif principal ?
+
+Le DevOps est un ensemble de pratiques qui rapprochent les équipes de développement et d'exploitation pour livrer plus rapidement avec plus de fiabilité.
+
 137.	Qu’est-ce que l’intégration continue ? 
+
+C'est une pratique consistant à intégrer régulièrement le code dans un dépôt partagé, avec des tests automatiques à chaque modification pour détecter rapidement les erreurs.
+
 138.	Qu’est-ce que Docker ? Et en quoi est-il utile dans le cadre du DevOps ?
+
+Docker est un outil permettant de créer, déployer et exécuter des applications dans des conteneurs. Il assure un environnement homogène, facilite les déploiements et réduit les bugs liés aux différences de configuration.
+
 139.	Qu’est-ce qu’un test unitaire ? 
+
+C'est un test vérifiant une unité de code (souvent une fonction ou une méthode) de manière isolée afin d'en assurer le bon fonctionnement.
+
 140.	Quelle est l'unité de code testée lors d'un test unitaire ?
+
+Généralement, une fonction ou une méthode.
+
 141.	Quelles sont les caractéristiques d'un bon test unitaire ?
+
+Isolé, Rapide, Répétable, Clair dans son objectif, Précis dans son échec
+
 142.	Qu'est-ce qu'une assertion dans un test unitaire ?
- 
+
+C'est une instruction vérifiant qu'une condition est vraie; Si l'assertion échoue, le test échoue alors.
+ 
 ## English
 1)	What does JavaScript enable you to do on a website ?
 a.	Add interactive behavior and dynamic content
